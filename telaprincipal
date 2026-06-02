@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Pf</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabeçario">
+
+        <ul>
+            <img src="tourpf.png" alt="logo" width="80px">
+            <img class="nós-icon" src="nós.png" alt="hotel" width="30px">
+            <li><a href="nós.html">Quem somos nós?</a></li>
+            <img class="cachoeira-icon" src="cachoeira.png" alt="hotel" width="40px">
+            <li><a href="cachoeiras.html">Cachoeiras</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <img class="comida-icon" src="comida.png" alt="hotel" width="40px">
+            <li><a href="restaurantes.html">Restaurantes</a></li>
+            <img class="hotel-icon" src="hoteis.png" alt="hotel" width="40px">
+            <li><a href="hotel.html">Hotel</a></li>
+        </ul>
+    </header>
+
+
+
+    <div class="carrossel">
+
+        <button class="btn prev"></button>
+
+        <div class="side slide-left">
+            <img id="leftImg">
+        </div>
+
+        <div class=" main">
+            <img id="mainImg">
+        </div>
+
+        <div class="info">
+                <h1 id="title"></h1>
+                <p id="description"></p>
+            </div>
+            
+        <div class="side slide-right">
+            <img id="rightImg">
+        </div>
+        
+        <button class="btn next"></button>
+
+    </div>
+    
+    
+<script src="script.js"></script>   
+</body>
+</html>
