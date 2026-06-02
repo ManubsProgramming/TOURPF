@@ -1,0 +1,302 @@
+@font-face {
+    font-family:'Utendo';
+    src:  url('Utendo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'UtendoBold';
+    src:  url('Utendo-Bold.ttf') format('truetype');
+
+}
+
+body{
+    background-color: #f7f4d9;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.hotel-icon {
+    margin-top: -15px;
+    margin-right: -230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.cachoeira-icon {
+    margin-top: -15px;
+    margin-right: -220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.nós-icon {
+    margin-top: -15px;
+    margin-right: -210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.comida-icon {
+    margin-top: -15px;
+    margin-right: -200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.cabeçario {
+    background: #e0d4a3;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 90px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 90px;
+  display: flex;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+ul li a{
+    margin-top: 50px;
+    height: 80px;
+    width: 100px;
+    font-family: 'Utendo';
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a{
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ a :hover {
+    color:#697240;
+
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.carrossel{
+    flex-direction: column;
+    width:100%;
+    min-height:95vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+
+.main{
+   width: 700px;
+   margin-top:6px;
+    height: 430px;
+    position: absolute;
+    left:50%;
+    top:32%;
+    transform: translate(-50%, -50%);
+    border-radius:10px;
+    z-index:10;
+    
+
+     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*preenche a img e ela nao fica esticada*/
+    border-radius: 10px;
+}
+
+.main h1{
+    color: white;
+    font-family: 'BorschaBlack';
+}
+.main p {
+    color: rgb(0, 0, 0);
+    margin-top:-20px;
+    font-family: 'BorschaBlack';
+}
+
+.main:hover{
+    transform: translate(-50%, -50%) scale(1.01);
+    transition: 0.4s;
+}
+
+.info{
+    margin-top: 50px;
+    font-family:'Utendo';
+     position:absolute;
+    top: calc(25% + 240px);
+    left:50%;
+    transform:translateX(-50%);
+    width:620px;
+}
+
+.info h1{
+    color:#2f3418;
+    font-size:28px;
+    margin-bottom:10px;
+    font-family:'UtendoBold';
+}
+
+.info p{
+    color:#444;
+    font-size:18px;
+    line-height:1.5;
+    font-family:'Utendo';
+}
+.side{
+    position: absolute; /*botoes de forma absoluta, esquerda outra direita*/
+    width:360px;
+    height:390px;
+    opacity: 0.4;
+    overflow:hidden;/*esconde o que ultrapassar a div*/
+    transition: all 0.5s ease;
+
+     box-shadow: 0 15px 30px rgba(0,0,0,0.50);
+}
+
+.side:hover{
+    opacity:1;
+    transform: translateY(-50%) scale(1.03);
+}
+
+.slide-left{
+    border-radius: 10px 0 0 10px;
+    left:200px;
+    top: 32%;
+    transform: translateY(-50%);
+    clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%);
+    z-index: 2;
+}
+
+.slide-right{
+    border-radius: 10px 0 0 10px;
+    right:200px;
+    top: 32%;
+    transform: translateY(-50%);
+    clip-path: polygon(0% 0%, 100% 15%, 100% 85%, 0% 100%);
+     z-index: 2;
+}
+
+.side img{
+    width: 100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 10px;
+    display: block;
+}
+/*agora é a parte mais legal, que eu aprendo a deixar em trapezio as fotos do lado ebaa:)*/
+
+.slide-left{
+    clip-path:polygon( /*as coordenadas do poligono, onde cada coordenada é um ponto do poligono, e a ordem é importante*/
+        0 10%, /*primeira coordenada, canto superior esquerdo*/
+        100% 0,/*segunda coordenada, canto superior direito*/
+        100% 100%, /*terceira coordenada, canto inferior direito*/
+        0 90% /*quarta coordenada, canto inferior esquerdo*/
+    )
+}
+
+.slide-right{
+    clip-path:polygon(
+        0 0,
+        100% 10%,
+        100% 90%,
+        0 100%
+    )
+}
+
+.slide-left img, .slide-right img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+
+.btn{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background:#3f461e;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    z-index:20;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background:#96a75c;
+}
+
+.prev{
+    left:20px;
+    top:42%;
+    transform:translateY(-50%);
+}
+
+.next{
+    right:20px;
+    top:42%;
+    transform:translateY(-50%);
+}
+
+.prev,
+.next{
+    top:32%;
+    transform: translateY(-50%);
+}
