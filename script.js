@@ -1,24 +1,24 @@
 const slides = [
     {
-        image:'img/maroaga.jpeg',
+        image:'imgPrincipal/maroaga.jpeg',
         title: 'Cachoeira do Maroaga',
         description: 'A Cachoeira do Maroaga é uma das mais belas cachoeiras da região de Presidente Figueiredo, no estado do Amazonas.'
     },
 
     {
-        image: 'img/calangohotel.jpg',
+        image: 'imgPrincipal/calangohotel.jpg',
         title:'Hotel Do Calango Azul',
         description:'O Hotel Calango Azul se trata de um hotel aconchegante e confortavel',
     },
 
     {
-        image: 'img/anauerestaurante.jpg',
+        image: 'imgPrincipal/anauerestaurante.jpg',
         title: 'Restaurante Anauê',
         description:'O Restaurante Anauê é conhecido por sua culinária regional e ambiente acolhedor, oferecendo pratos típicos da Amazônia em uma culminar experiência gastronômica',
     },
 
     {
-        image:'img/Festacupu.jpeg',
+        image:'imgPrincipal/Festacupu.jpeg',
         title: 'Festa do Cupuaçu',
         description: 'A Festa do Cupuaçu é um evento cultural que celebra a tradição e a identidade da comunidade local.'
     }
