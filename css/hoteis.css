@@ -1,0 +1,323 @@
+@font-face {
+    font-family:'Utendo';
+    src:  url('Utendo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'UtendoBold';
+    src:  url('Utendo-Bold.ttf') format('truetype');
+
+}
+
+body{
+    background-color: #f7f4d9;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.hotel-icon {
+    margin-top: -15px;
+    margin-right: -230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.cachoeira-icon {
+    margin-top: -15px;
+    margin-right: -220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.nós-icon {
+    margin-top: -15px;
+    margin-right: -210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.comida-icon {
+    margin-top: -15px;
+    margin-right: -200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.cabeçario {
+    background: #e0d4a3;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 90px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 90px;
+  display: flex;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+ul li a{
+    margin-top: 50px;
+    height: 80px;
+    width: 100px;
+    font-family: 'Utendo';
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a{
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ a :hover {
+    color:#697240;
+
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.hero {
+    text-align: center;
+    font-family: 'Utendo';
+    font-size: 22px;
+    padding-bottom: 5px;
+}
+
+.filter-container {
+    max-width: 800px;
+    margin: 40px auto 40px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #D99126;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #1C3028;
+    font-size: 14px;
+}
+
+.filter-group label i {
+    color: #D99126;
+    margin-right: 5px;
+}
+
+.filter-group input[type="date"],
+.filter-group input[type="range"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+}
+
+.filter-group input[type="date"]:focus {
+    border-color: #2E4A3F;
+}
+
+.filter-group input[type="range"] {
+    accent-color: #2E4A3F;
+    cursor: pointer;
+}
+
+.btn-filter {
+    background-color: #D99126;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-filter:hover {
+    background-color: #B5751D;
+}
+
+.hotels-section {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+.hotels-section h3 {
+    color: #1C3028;
+    font-size: 24px;
+    margin-bottom: 25px;
+    border-left: 5px solid #2E4A3F;
+    padding-left: 10px;
+}
+
+.hotels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.hotel-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.card-image {
+    height: 200px;
+    background-color: #ddd;
+}
+.img-1 { background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80') center/cover; }
+.img-2 { background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80') center/cover; }
+.img-3 { background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80') center/cover; }
+
+.card-content {
+    padding: 20px;
+}
+
+.rating {
+    display: inline-block;
+    background-color: #fdf5e6;
+    color: #B5751D;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.rating i {
+    color: #D99126;
+}
+
+.rating span {
+    color: #666;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+.card-content h4 {
+    color: #1C3028;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.address {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    min-height: 36px;
+}
+
+.address i {
+    color: #2E4A3F;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2E4A3F;
+}
+
+.price small {
+    font-size: 12px;
+    color: #777;
+    font-weight: normal;
+}
+
+.badge {
+    background-color: #2E4A3F;
+    color: white;
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.main-footer {
+    background-color: #1C3028; 
+    color: #a4b3ad;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 14px;
+}
