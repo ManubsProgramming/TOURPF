@@ -1,12 +1,11 @@
 @font-face {
-    font-family:'Utendo';
-    src:  url('Utendo-Regular.ttf') format('truetype');
+    font-family: 'Utendo';
+    src: url('Utendo-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family:'UtendoBold';
-    src:  url('Utendo-Bold.ttf') format('truetype');
-
+    font-family: 'UtendoBold';
+    src: url('Utendo-Bold.ttf') format('truetype');
 }
 
 body{
