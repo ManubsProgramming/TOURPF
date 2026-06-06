@@ -146,19 +146,24 @@
             priceValue.textContent = `R$ ${e.target.value}`;
         });
 
-        function filtrarHoteis() {
-            const limitePreco = parseInt(priceRange.value);
-            const hoteis = document.querySelectorAll('.hotel-card');
+<section class="filter-container">
+    <div class="filter-form">
+        <div class="filter-group">
+            <label for="booking-date"><i class="fa-regular fa-calendar-days"></i> Período da Reserva</label>
+            <input type="date" id="booking-date">
+        </div>
 
-            hoteis.forEach(hotel => {
-                const precoHotel = parseInt(hotel.getAttribute('data-preco'));
-                if (precoHotel <= limitePreco) {
-                    hotel.style.display = 'block';
-                } else {
-                    hotel.style.display = 'none';
-                }
-            });
-        }
+        <div class="filter-group">
+            <label><i class="fa-solid fa-dollar-sign"></i> Escolha a Diária Máxima:</label>
+            <div class="preco-botoes-container">
+                <a href="#todos" class="btn-opcao">Todos</a>
+                <a href="#ate-250" class="btn-opcao">Até R$ 250</a>
+                <a href="#ate-450" class="btn-opcao">Até R$ 450</a>
+            </div>
+        </div>
+    </div>
+</section>
+
     </script>
 </body>
 </html>
