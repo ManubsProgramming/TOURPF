@@ -13,7 +13,7 @@
 
         <ul>
             <img src="imgPrincipal/tourpf.png" alt="logo" width="80px">
-
+            
             <img class="nós-icon" src="imgPrincipal/nós.png" alt="hotel" width="30px">
             <li><a href="sobrenos.html">Quem somos nós?</a></li>
             
@@ -21,17 +21,24 @@
             <li><a href="cachoeiras.html">Cachoeiras</a></li>
 
             <li><a href="eventos.html">Eventos</a></li>
+
             <img class="comida-icon" src="imgPrincipal/comida.png" alt="hotel" width="40px">
             <li><a href="restaurantes.html">Restaurantes</a></li>
+
             <img class="hotel-icon" src="imgPrincipal/hoteis.png" alt="hotel" width="40px">
-            <li><a href="hotel.html">Hotel</a></li>
+            <li><a href="hotel.html">Hotéis</a></li>
         </ul>
     </header>
 
-    <section class="hero">
+<section class="hero">
         <h2>Onde se hospedar na Terra das Cachoeiras</h2>
-        <p>Encontre as melhores pousadas e hotéis com base nas avaliações de viajantes.</p>
+        <p>Encontre as melhores pousadas e hotéis com base nas avaliações de viajantes.</p>    
     </section>
+    
+    <input type="radio" name="preco-filtro" id="filtro-todos" checked class="filtro-radio">
+    <input type="radio" name="preco-filtro" id="filtro-200" class="filtro-radio">
+    <input type="radio" name="preco-filtro" id="filtro-300" class="filtro-radio">
+    <input type="radio" name="preco-filtro" id="filtro-500" class="filtro-radio">
 
     <section class="filter-container">
         <div class="filter-form">
@@ -41,11 +48,15 @@
             </div>
 
             <div class="filter-group">
-                <label for="price-range"><i class="fa-solid fa-dollar-sign"></i> Preço Máximo: <span id="price-value">R$ 500</span></label>
-                <input type="range" id="price-range" min="100" max="600" step="50" value="500">
+                <label><i class="fa-solid fa-dollar-sign"></i> Preço Máximo: <span class="dinamico-preco"></span></label>
+                
+                <div class="botoes-filtro">
+                    <label for="filtro-todos" class="btn-opcao">Todos</label>
+                    <label for="filtro-200" class="btn-opcao">Até R$ 200</label>
+                    <label for="filtro-300" class="btn-opcao">Até R$ 300</label>
+                    <label for="filtro-500" class="btn-opcao">Até R$ 500</label>
+                </div>
             </div>
-
-            <button type="button" class="btn-filter" onclick="filtrarHoteis()">Filtrar</button>
         </div>
     </section>
 
@@ -54,7 +65,7 @@
         
         <div class="hotels-grid" id="hotels-grid">
             
-            <div class="hotel-card" data-preco="450">
+            <div class="hotel-card p-500" data-preco="450">
                 <div class="card-image img-1"></div>
                 <div class="card-content">
                     <span class="rating"><i class="fa-solid fa-star"></i> 4.8 <span>(Booking)</span></span>
@@ -67,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="hotel-card" data-preco="250">
+            <div class="hotel-card p-300" data-preco="250">
                 <div class="card-image img-2"></div>
                 <div class="card-content">
                     <span class="rating"><i class="fa-solid fa-star"></i> 4.6 <span>(TripAdvisor)</span></span>
@@ -80,21 +91,21 @@
                 </div>
             </div>
 
-            <div class="hotel-card" data-preco="180">
+            <div class="hotel-card p-200" data-preco="180">
                 <div class="card-image img-3"></div>
                 <div class="card-content">
                     <span class="rating"><i class="fa-solid fa-star"></i> 4.3 <span>(Google Reviews)</span></span>
                     <h4>Hotel de Selva Mari-Mari</h4>
                     <p class="address"><i class="fa-solid fa-location-dot"></i>Rodovia BR-174, Km 113 (Ramal monitorado)</p>
                     <div class="card-footer">
-                        <span class="price">R$ 450 <small>/diária</small></span>
+                        <span class="price">R$ 180 <small>/diária</small></span>
                         <span class="badge">Experiência real</span>
                     </div>
                 </div>
             </div>
 
-              <div class="hotel-card" data-preco="180">
-                <div class="card-image img-3"></div>
+            <div class="hotel-card p-500" data-preco="500">
+                <div class="card-image img-4"></div>
                 <div class="card-content">
                     <span class="rating"><i class="fa-solid fa-star"></i> 1.3 <span>(Google Reviews)</span></span>
                     <h4>Pousada da Vilma</h4>
@@ -106,7 +117,7 @@
                 </div>
             </div>
             
-              <div class="hotel-card" data-preco="180">
+            <div class="hotel-card p-300" data-preco="180">
                 <div class="card-image img-3"></div>
                 <div class="card-content">
                     <span class="rating"><i class="fa-solid fa-star"></i> 4.3 <span>(Google Reviews)</span></span>
@@ -119,8 +130,8 @@
                 </div>
             </div>
 
-            <div class="hotel-card" data-preco="180">
-                <div class="card-image img-3"></div>
+            <div class="hotel-card p-500" data-preco="500">
+                <div class="card-image img-6"></div>
                 <div class="card-content">
                     <span class="rating"><i class="fa-solid fa-star"></i> 4.1 <span>(Google Reviews)</span></span>
                     <h4>Hotel Amazon Green</h4>
@@ -134,32 +145,5 @@
         </div>
     </main>
 
-    <footer class="main-footer">
-        <p>&copy; 2026 TourPF - Guia Informativo de Presidente Figueiredo, Amazonas.</p>
-    </footer>
-
-    <script>
-        const priceRange = document.getElementById('price-range');
-        const priceValue = document.getElementById('price-value');
-        
-        priceRange.addEventListener('input', (e) => {
-            priceValue.textContent = `R$ ${e.target.value}`;
-        });
-
-function filtrarHoteis() {
-    const limitePreco = parseInt(priceRange.value);
-    const hoteis = document.querySelectorAll('.hotel-card');
-
-    hoteis.forEach(hotel => {
-        const precoHotel = parseInt(hotel.getAttribute('data-preco'));
-
-        if (!isNaN(precoHotel) && precoHotel <= limitePreco) {
-            hotel.style.display = 'block';
-        } else {
-            hotel.style.display = 'none';
-        }
-    });
-}
-    </script>
 </body>
 </html>

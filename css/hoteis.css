@@ -1,11 +1,12 @@
 @font-face {
-    font-family: 'Utendo';
-    src: url('Utendo-Regular.ttf') format('truetype');
+    font-family:'Utendo';
+    src:  url('Utendo-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'UtendoBold';
-    src: url('Utendo-Bold.ttf') format('truetype');
+    font-family:'UtendoBold';
+    src:  url('Utendo-Bold.ttf') format('truetype');
+
 }
 
 body{
@@ -131,7 +132,7 @@ li a{
 
 .filter-container {
     max-width: 800px;
-    margin: 40px auto 40px auto;
+    margin: 40px auto;
     background-color: white;
     padding: 25px;
     border-radius: 10px;
@@ -143,8 +144,8 @@ li a{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: flex-end;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .filter-group {
@@ -156,6 +157,7 @@ li a{
 }
 
 .filter-group label {
+    font-family: 'Utendo', sans-serif;
     font-weight: 600;
     color: #1C3028;
     font-size: 14px;
@@ -166,38 +168,75 @@ li a{
     margin-right: 5px;
 }
 
-.filter-group input[type="date"],
-.filter-group input[type="range"] {
+.filter-group input[type="date"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
     font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.filter-group input[type="date"]:focus {
-    border-color: #2E4A3F;
+input.filtro-radio {
+    display: none !important;
 }
 
-.filter-group input[type="range"] {
-    accent-color: #2E4A3F;
+.botoes-filtro {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-opcao {
+    background-color: #f4f4f4;
+    color: #1C3028;
+    border: 2px solid #ccc;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Utendo', sans-serif;
+    display: inline-block;
+    user-select: none;
 }
 
-.btn-filter {
+.btn-opcao:hover {
+    border-color: #D99126;
+    color: #D99126;
+    background-color: #fff9f0;
+}
+
+#filtro-todos:checked ~ .filter-container .btn-opcao[for="filtro-todos"],
+#filtro-200:checked ~ .filter-container .btn-opcao[for="filtro-200"],
+#filtro-300:checked ~ .filter-container .btn-opcao[for="filtro-300"],
+#filtro-500:checked ~ .filter-container .btn-opcao[for="filtro-500"] {
     background-color: #D99126;
     color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border-color: #D99126;
+    box-shadow: 0 4px 10px rgba(217, 145, 38, 0.3);
 }
 
-.btn-filter:hover {
-    background-color: #B5751D;
+.dinamico-preco {
+    font-weight: bold;
+    color: #D99126;
+    margin-left: 5px;
+}
+
+#filtro-todos:checked ~ .filter-container .dinamico-preco::after { content: "Mostrar Todos"; }
+#filtro-200:checked ~ .filter-container .dinamico-preco::after { content: "R$ 200"; }
+#filtro-300:checked ~ .filter-container .dinamico-preco::after { content: "R$ 300"; }
+#filtro-500:checked ~ .filter-container .dinamico-preco::after { content: "R$ 500"; }
+
+#filtro-200:checked ~ .hotels-section .hotel-card:not(.p-200) {
+    display: none !important;
+}
+
+#filtro-300:checked ~ .hotels-section .hotel-card.p-500 {
+    display: none !important;
 }
 
 .hotels-section {
