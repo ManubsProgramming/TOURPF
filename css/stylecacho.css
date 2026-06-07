@@ -1,3 +1,52 @@
+body {
+    background-color: #FFF9E6;
+    font-family: 'Poppins', sans-serif;
+    color: #1A1A1A;
+    padding: 0px 0px;
+}
+
+/* Grid de Cachoeiras - 3 colunas x 5 linhas */
+.grid-cachoeiras {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:20px;
+}
+
+.card-cachoeira {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-img {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-titulo {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
 .card-info {
     font-size: 14px;
     line-height: 1.5;
@@ -30,13 +79,12 @@
 }
 @font-face {
     font-family:'Utendo';
-    src:  url('Utendo-Regular.ttf') format('truetype');
+    src: url('../font/Utendo-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family:'UtendoBold';
-    src:  url('Utendo-Bold.ttf') format('truetype');
-
+    src: url('../font/Utendo-Bold.ttf') format('truetype');
 }
 
 body{
