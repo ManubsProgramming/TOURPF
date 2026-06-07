@@ -2,17 +2,21 @@
 
 @font-face {
     font-family:'Utendo';
-    src:  url('Utendo-Regular.ttf') format('truetype');
+    src:  url('../font/Utendo-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family:'UtendoBold';
-    src:  url('Utendo-Bold.ttf') format('truetype');
+    src:  url('../font/Utendo-Bold.ttf') format('truetype');
 
 }
 
-body{
+html, body {
+    margin: 0;
+    padding: 0;
     background-color: #f7f4d9;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -21,13 +25,13 @@ body{
     align-items: center;
 }
 
-.logo img{
+.logo img {
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
 }
 
 .hotel-icon {
     margin-top: -15px;
-    margin-right: -230px;
+    margin-right: -150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +42,18 @@ body{
 
 .cachoeira-icon {
     margin-top: -15px;
-    margin-right: -220px;
+    margin-right: -140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.eventos-icon {
+    margin-top: -15px;
+    margin-right: -146px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +64,7 @@ body{
 
 .nós-icon {
     margin-top: -15px;
-    margin-right: -210px;
+    margin-right: -125px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +75,7 @@ body{
 
 .comida-icon {
     margin-top: -15px;
-    margin-right: -200px;
+    margin-right: -130px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,47 +91,40 @@ body{
     justify-content: space-around;
     align-items: center;
     font-size: 15px;
-    margin-top: -8px;
-    margin-left: -10px;
-    margin-right: -10px;
+    width: 100%;
     height: 90px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-  
+    box-sizing: border-box;
 }
+
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 90px;
-  display: flex;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+    list-style-type: none;
+    margin: 0;
+    padding: 0 90px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-ul li a{
+ul li a {
     margin-top: 50px;
     height: 80px;
     width: 100px;
-    font-family: 'Utendo';
+    font-family: 'Utendo', sans-serif;
     display: block;
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-li a{
+
+li a {
     display: block;
     color: black;
     padding: 8px 16px;
     text-decoration: none;
-}
-
- a :hover {
-    color:#697240;
-
 }
 
 .active {
@@ -126,7 +134,7 @@ li a{
 
 .hero {
     text-align: center;
-    font-family: 'Utendo';
+    font-family: 'Utendo', sans-serif;
     font-size: 22px;
     padding-bottom: 5px;
 }
@@ -158,7 +166,7 @@ li a{
 }
 
 .filter-group label {
-    font-family: 'Utendo', sans-serif;
+    font-family: 'UtendoBold', sans-serif;
     font-weight: 600;
     color: #1C3028;
     font-size: 14px;
@@ -247,6 +255,7 @@ input.filtro-radio {
 }
 
 .hotels-section h3 {
+    font-family: 'Utendo', sans-serif;
     color: #1C3028;
     font-size: 26px;
     text-align: center;
@@ -314,6 +323,7 @@ input.filtro-radio {
 }
 
 .rating {
+    font-family: 'Utendo', sans-serif;
     align-self: flex-start;
     background-color: #fdf5e6;
     color: #B5751D;
@@ -336,12 +346,14 @@ input.filtro-radio {
 }
 
 .card-content h4 {
+    font-family: 'Utendo', sans-serif;
     color: #1C3028;
     font-size: 22px;
     margin-bottom: 8px;
 }
 
 .address {
+    font-family: 'Utendo', sans-serif;
     font-size: 14px;
     color: #555;
     line-height: 1.5;
@@ -363,18 +375,21 @@ input.filtro-radio {
 }
 
 .price {
+    font-family: 'Utendo', sans-serif;
     font-size: 24px;
     font-weight: bold;
     color: #2E4A3F;
 }
 
 .price small {
+    font-family: 'Utendo', sans-serif;
     font-size: 13px;
     color: #777;
     font-weight: normal;
 }
 
 .badge {
+    font-family: 'Utendo', sans-serif;
     background-color: #2E4A3F;
     color: #ffffff;
     font-size: 12px;
@@ -435,4 +450,196 @@ input.filtro-radio {
     text-align: center;
     padding: 25px 20px;
     font-size: 14px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* cabeçario igual ao index */
+@media (min-width: 821px) and (max-width: 1024px) {
+    ul {
+        padding: 0 15px;
+        gap: 8px;
+    }
+
+    ul li a {
+        font-size: 13px;
+        margin-top: 0;
+        height: auto;
+        padding: 8px 12px;
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    .cabeçario {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px !important;
+        gap: 4px;
+    }
+
+    ul a:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+        order: -1;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul li a {
+        margin-top: 0;
+        height: auto;
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.06);
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabeçario {
+        height: auto;
+        padding: 12px 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 !important;
+        gap: 4px;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    ul a:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+        order: -1;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li a {
+        font-size: 11px;
+        padding: 4px 7px;
+        margin-top: 0;
+        height: auto;
+        width: auto;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.06);
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none !important;
+    }
+
+    /* hero */
+    .hero {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    /* filtro */
+    .filter-container {
+        margin: 20px 15px;
+        padding: 15px;
+    }
+
+    .filter-form {
+        flex-direction: column;
+    }
+
+    .botoes-filtro {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-opcao {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    /* cards */
+    .hotels-section {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .hotel-card {
+        flex-direction: column;
+    }
+
+    .card-image {
+        width: 100%;
+        min-width: 100%;
+        height: 180px;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .card-content h4 {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* tablet horizontal */
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: landscape) {
+    .hotels-section {
+        padding: 0 30px;
+    }
+
+    .card-image {
+        width: 220px;
+        min-width: 220px;
+        height: 180px;
+    }
+
+    .filter-container {
+        margin: 30px auto;
+    }
 }
