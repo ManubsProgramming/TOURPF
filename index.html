@@ -3,55 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour Pf</title>
-      <link rel="stylesheet" href="style.css">
+    <title>Tour Pf - Página Inicial</title>
+      <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header class="cabeçario">
 
         <ul>
-            <img src="tourpf.png" alt="logo" width="80px">
-            <img class="nós-icon" src="nós.png" alt="hotel" width="30px">
-            <li><a href="nós.html">Quem somos nós?</a></li>
-            <img class="cachoeira-icon" src="cachoeira.png" alt="hotel" width="40px">
+            <a href="index.html">
+            <img src="imgPrincipal/tourpf.png" alt="logo" width="60px">
+            </a>
+            <img class="nós-icon" src="imgPrincipal/nós.png" alt="hotel" width="20px">
+            <li><a href="sobrenos.html">Quem somos nós?</a></li>
+            
+            <img class="cachoeira-icon" src="imgPrincipal/cachoeira.png" alt="hotel" width="30px">
             <li><a href="cachoeiras.html">Cachoeiras</a></li>
+
+            <img class="eventos-icon" src="imgPrincipal/eventos.png" alt="hotel" width="30px">
             <li><a href="eventos.html">Eventos</a></li>
-            <img class="comida-icon" src="comida.png" alt="hotel" width="40px">
+
+            <img class="comida-icon" src="imgPrincipal/comida.png" alt="hotel" width="30px">
             <li><a href="restaurantes.html">Restaurantes</a></li>
-            <img class="hotel-icon" src="hoteis.png" alt="hotel" width="40px">
+
+            <img class="hotel-icon" src="imgPrincipal/hoteis.png" alt="hotel" width="30px">
             <li><a href="hotel.html">Hotel</a></li>
         </ul>
     </header>
 
 
 
-    <div class="carrossel">
+ <div class="carrossel">
 
-        <button class="btn prev"></button>
+    <input type="radio" name="slide" id="s1" checked>
+    <input type="radio" name="slide" id="s2">
+    <input type="radio" name="slide" id="s3">
+    <input type="radio" name="slide" id="s4">
 
-        <div class="side slide-left">
-            <img id="leftImg">
+    <div class="slides-container">
+        <div class="slide-item" id="slide1">
+            <img src="imgPrincipal/maroaga.jpeg" alt="Cachoeira do Maroaga">
         </div>
-
-        <div class=" main">
-            <img id="mainImg">
+        <div class="slide-item" id="slide2">
+            <img src="imgPrincipal/calangohotel.jpg" alt="Hotel Do Calango Azul">
         </div>
-
-        <div class="info">
-                <h1 id="title"></h1>
-                <p id="description"></p>
-            </div>
-            
-        <div class="side slide-right">
-            <img id="rightImg">
+        <div class="slide-item" id="slide3">
+            <img src="imgPrincipal/anauerestaurante.jpg" alt="Restaurante Anauê">
         </div>
-        
-        <button class="btn next"></button>
-
+        <div class="slide-item" id="slide4">
+            <img src="imgPrincipal/Festacupu.jpeg" alt="Festa do Cupuaçu">
+        </div>
     </div>
+
+    <div class="info" id="info1">
+        <h1>Cachoeira do Maroaga</h1>
+        <div class="avaliacao">★★★★★ 4.9</div>
+        <p>A Cachoeira do Maroaga é uma das mais belas cachoeiras da região de Presidente Figueiredo, no estado do Amazonas. Com suas águas cristalinas e rodeada por uma exuberante vega.</p>
+    </div>
+    <div class="info" id="info2">
+        <h1>Hotel Do Calango Azul</h1>
+        <div class="avaliacao">★★★★☆ 4.3</div>
+        <p>O Hotel Calango Azul se trata de um hotel aconchegante e confortavel. Localizado em meio à natureza, oferece uma experiência única para os visitantes.</p>
+    </div>
+    <div class="info" id="info3">
+        <h1>Restaurante Anauê</h1>
+        <div class="avaliacao">★★★★☆ 4.5</div>
+        <p>O Restaurante Anauê é conhecido por sua culinária regional e ambiente acolhedor, oferecendo pratos típicos da Amazônia em uma culminar experiência gastronômica.</p>
+    </div>
+    <div class="info" id="info4">
+        <h1>Festa do Cupuaçu</h1>
+        <div class="avaliacao">★★★★☆ 4.5</div>
+        <p>A Festa do Cupuaçu é um evento cultural que celebra a tradição e a identidade da comunidade local, reunindo pessoas de todas as idades para celebrar a cultura amazônica.</p>
+    </div>
+
+    <div class="dots">
+        <label for="s1" class="dot"></label>
+        <label for="s2" class="dot"></label>
+        <label for="s3" class="dot"></label>
+        <label for="s4" class="dot"></label>
+    </div>
+
+    <!-- prevs -->
+<!-- prevs -->
+<label for="s4" class="btn prev p1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+    </svg>
+</label>
+<label for="s1" class="btn prev p2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+    </svg>
+</label>
+<label for="s2" class="btn prev p3">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+    </svg>
+</label>
+<label for="s3" class="btn prev p4">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+    </svg>
+</label>
+
+<!-- nexts -->
+<label for="s2" class="btn next n1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+    </svg>
+</label>
+<label for="s3" class="btn next n2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+    </svg>
+</label>
+<label for="s4" class="btn next n3">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+    </svg>
+</label>
+<label for="s1" class="btn next n4">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+    </svg>
+</label>
+
+</div>
     
-    
-<script src="script.js"></script>   
+<div class="banner">
+    <img src="imgPrincipal/fotofrase.jpg" alt="banner">
+    <div class="banner-frase">
+        <p>"A natureza é a maior obra de arte do mundo."</p>
+    </div>
+</div>
+    <footer>
+        <p>© 2026 - Rebeca Isabela </p>
+    </footer>
+      
 </body>
 </html>
