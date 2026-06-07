@@ -1,8 +1,34 @@
+@font-face {
+    font-family:'Utendo';
+    src: url('../font/Utendo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'UtendoBold';
+    src: url('../font/Utendo-Bold.ttf') format('truetype');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f4d9;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #FFF9E6;
     font-family: 'Poppins', sans-serif;
     color: #1A1A1A;
-    padding: 0px 0px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
 }
 
 /* Grid de Cachoeiras - 3 colunas x 5 linhas */
@@ -87,22 +113,27 @@ body {
     src: url('../font/Utendo-Bold.ttf') format('truetype');
 }
 
-body{
+html, body {
+    margin: 0;
+    padding: 0;
     background-color: #f7f4d9;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
+
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logo img{
+.logo img {
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
 }
 
 .hotel-icon {
     margin-top: -15px;
-    margin-right: -230px;
+    margin-right: -150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +144,18 @@ body{
 
 .cachoeira-icon {
     margin-top: -15px;
-    margin-right: -220px;
+    margin-right: -140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.eventos-icon {
+    margin-top: -15px;
+    margin-right: -146px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,7 +166,7 @@ body{
 
 .nós-icon {
     margin-top: -15px;
-    margin-right: -210px;
+    margin-right: -125px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,7 +177,7 @@ body{
 
 .comida-icon {
     margin-top: -15px;
-    margin-right: -200px;
+    margin-right: -130px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,51 +193,62 @@ body{
     justify-content: space-around;
     align-items: center;
     font-size: 15px;
-    margin-top: -8px;
-    margin-left: -10px;
-    margin-right: -10px;
+    width: 100%;
     height: 90px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-  
+    box-sizing: border-box;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 90px;
-  display: flex;
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+    list-style-type: none;
+    margin: 0;
+    padding: 0 90px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-ul li a{
+ul li a {
     margin-top: 50px;
     height: 80px;
     width: 100px;
-    font-family: 'Utendo';
+    font-family: 'Utendo', sans-serif;
     display: block;
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-li a{
+
+li a {
     display: block;
     color: black;
     padding: 8px 16px;
     text-decoration: none;
 }
 
- a :hover {
-    color:#697240;
-
+a:hover {
+    color: #697240;
 }
 
 .active {
-  background-color: #04AA6D;
-  color: white;
+    background-color: #04AA6D;
+    color: white;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #697240;
+}
+
+.active {
+    background-color: #04AA6D;
+    color: white;
 }
