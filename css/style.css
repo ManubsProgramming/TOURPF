@@ -1,16 +1,19 @@
 @font-face {
     font-family:'Utendo';
-    src:  url('Utendo-Regular.ttf') format('truetype');
+    src: url('../font/Utendo-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family:'UtendoBold';
-    src:  url('Utendo-Bold.ttf') format('truetype');
-
+    src: url('../font/Utendo-Bold.ttf') format('truetype');
 }
 
-body{
+html, body {
+    margin: 0;
+    padding: 0;
     background-color: #f7f4d9;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -19,13 +22,13 @@ body{
     align-items: center;
 }
 
-.logo img{
+.logo img {
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
 }
 
 .hotel-icon {
     margin-top: -15px;
-    margin-right: -230px;
+    margin-right: -150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +39,18 @@ body{
 
 .cachoeira-icon {
     margin-top: -15px;
-    margin-right: -220px;
+    margin-right: -140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.eventos-icon {
+    margin-top: -15px;
+    margin-right: -146px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +61,7 @@ body{
 
 .nós-icon {
     margin-top: -15px;
-    margin-right: -210px;
+    margin-right: -125px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +72,7 @@ body{
 
 .comida-icon {
     margin-top: -15px;
-    margin-right: -200px;
+    margin-right: -130px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,228 +88,604 @@ body{
     justify-content: space-around;
     align-items: center;
     font-size: 15px;
-    margin-top: -8px;
-    margin-left: -10px;
-    margin-right: -10px;
+    width: 100%;
     height: 90px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-  
+    box-sizing: border-box;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 90px;
-  display: flex;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+    list-style-type: none;
+    margin: 0;
+    padding: 0 90px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-ul li a{
+ul li a {
     margin-top: 50px;
     height: 80px;
     width: 100px;
-    font-family: 'Utendo';
+    font-family: 'Utendo', sans-serif;
     display: block;
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-li a{
+
+li a {
     display: block;
     color: black;
     padding: 8px 16px;
     text-decoration: none;
 }
 
- a :hover {
-    color:#697240;
-
+a:hover {
+    color: #697240;
 }
 
 .active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.carrossel{
-    flex-direction: column;
-    width:100%;
-    min-height:95vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-}
-
-
-.main{
-   width: 700px;
-   margin-top:6px;
-    height: 430px;
-    position: absolute;
-    left:50%;
-    top:32%;
-    transform: translate(-50%, -50%);
-    border-radius:10px;
-    z-index:10;
-    
-
-     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-}
-
-.main img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*preenche a img e ela nao fica esticada*/
-    border-radius: 10px;
-}
-
-.main h1{
+    background-color: #04AA6D;
     color: white;
-    font-family: 'BorschaBlack';
-}
-.main p {
-    color: rgb(0, 0, 0);
-    margin-top:-20px;
-    font-family: 'BorschaBlack';
 }
 
-.main:hover{
-    transform: translate(-50%, -50%) scale(1.01);
-    transition: 0.4s;
+input[type="radio"] {
+    display: none;
 }
 
-.info{
-    margin-top: 50px;
-    font-family:'Utendo';
-     position:absolute;
-    top: calc(25% + 240px);
-    left:50%;
-    transform:translateX(-50%);
-    width:620px;
-}
-
-.info h1{
-    color:#2f3418;
-    font-size:28px;
-    margin-bottom:10px;
-    font-family:'UtendoBold';
-}
-
-.info p{
-    color:#444;
-    font-size:18px;
-    line-height:1.5;
-    font-family:'Utendo';
-}
-.side{
-    position: absolute; /*botoes de forma absoluta, esquerda outra direita*/
-    width:360px;
-    height:390px;
-    opacity: 0.4;
-    overflow:hidden;/*esconde o que ultrapassar a div*/
-    transition: all 0.5s ease;
-
-     box-shadow: 0 15px 30px rgba(0,0,0,0.50);
-}
-
-.side:hover{
-    opacity:1;
-    transform: translateY(-50%) scale(1.03);
-}
-
-.slide-left{
-    border-radius: 10px 0 0 10px;
-    left:200px;
-    top: 32%;
-    transform: translateY(-50%);
-    clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%);
-    z-index: 2;
-}
-
-.slide-right{
-    border-radius: 10px 0 0 10px;
-    right:200px;
-    top: 32%;
-    transform: translateY(-50%);
-    clip-path: polygon(0% 0%, 100% 15%, 100% 85%, 0% 100%);
-     z-index: 2;
-}
-
-.side img{
+.carrossel {
     width: 100%;
-    height:100%;
-    object-fit:cover;
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides-container {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+}
+
+.slide-item {
+    position: absolute;
+    top: 32%;
     border-radius: 10px;
-    display: block;
-}
-/*agora é a parte mais legal, que eu aprendo a deixar em trapezio as fotos do lado ebaa:)*/
-
-.slide-left{
-    clip-path:polygon( /*as coordenadas do poligono, onde cada coordenada é um ponto do poligono, e a ordem é importante*/
-        0 10%, /*primeira coordenada, canto superior esquerdo*/
-        100% 0,/*segunda coordenada, canto superior direito*/
-        100% 100%, /*terceira coordenada, canto inferior direito*/
-        0 90% /*quarta coordenada, canto inferior esquerdo*/
-    )
+    overflow: hidden;
+    transition: all 0.5s ease;
+    width: 230px;
+    height: 330px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 0;
 }
 
-.slide-right{
-    clip-path:polygon(
-        0 0,
-        100% 10%,
-        100% 90%,
-        0 100%
-    )
-}
-
-.slide-left img, .slide-right img{
-    width:100%;
+.slide-item img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
     display: block;
 }
 
+#s1:checked ~ .slides-container #slide1,
+#s2:checked ~ .slides-container #slide2,
+#s3:checked ~ .slides-container #slide3,
+#s4:checked ~ .slides-container #slide4 {
+    width: 640px;
+    height: 360px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
 
-.btn{
+#s1:checked ~ .slides-container #slide4,
+#s2:checked ~ .slides-container #slide1,
+#s3:checked ~ .slides-container #slide2,
+#s4:checked ~ .slides-container #slide3 {
+    width: 230px;
+    height: 330px;
+    left: 100px;
+    transform: translateY(-50%);
+    opacity: 0.4;
+    z-index: 2;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.50);
+}
+
+#s1:checked ~ .slides-container #slide2,
+#s2:checked ~ .slides-container #slide3,
+#s3:checked ~ .slides-container #slide4,
+#s4:checked ~ .slides-container #slide1 {
+    width: 230px;
+    height: 330px;
+    right: 100px;
+    left: auto;
+    transform: translateY(-50%);
+    opacity: 0.4;
+    z-index: 2;
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.50);
+}
+
+.info {
+    display: none;
     position: absolute;
-    width: 55px;
-    height: 55px;
-    border: none;
+    top: calc(32% + 210px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 620px;
+    font-family: 'Utendo';
+}
+
+#s1:checked ~ #info1,
+#s2:checked ~ #info2,
+#s3:checked ~ #info3,
+#s4:checked ~ #info4 {
+    display: block;
+}
+
+.info h1 {
+    color: #2f3418;
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-family: 'UtendoBold';
+}
+
+.info p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.dots {
+    position: absolute;
+    top: calc(32% + 190px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background:#3f461e;
-    color: white;
-    font-size: 35px;
+    background: #3f461e;
+    opacity: 0.3;
     cursor: pointer;
-    z-index:20;
+    transition: 0.3s;
+    display: block;
+}
+
+#s1:checked ~ .dots label:nth-child(1),
+#s2:checked ~ .dots label:nth-child(2),
+#s3:checked ~ .dots label:nth-child(3),
+#s4:checked ~ .dots label:nth-child(4) {
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+.btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #3f461e;
+    cursor: pointer;
+    z-index: 20;
+    top: 32%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: 0.3s;
 }
 
-.btn:hover{
-    background:#96a75c;
+.btn:hover {
+    background: #96a75c;
 }
 
-.prev{
-    left:20px;
-    top:42%;
-    transform:translateY(-50%);
+.p1, .p2, .p3, .p4,
+.n1, .n2, .n3, .n4 {
+    display: none;
 }
 
-.next{
-    right:20px;
-    top:42%;
-    transform:translateY(-50%);
+#s1:checked ~ .p1,
+#s2:checked ~ .p2,
+#s3:checked ~ .p3,
+#s4:checked ~ .p4 { display: flex; }
+
+#s1:checked ~ .n1,
+#s2:checked ~ .n2,
+#s3:checked ~ .n3,
+#s4:checked ~ .n4 { display: flex; }
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.btn svg {
+    width: 28px;
+    height: 28px;
+    pointer-events: none;
 }
 
-.prev,
-.next{
-    top:32%;
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: 40px;
+    overflow: hidden;
+    animation: surgir 1s ease forwards;
+}
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.banner-frase {
+    position: absolute;
+    top: 50%;
+    right: 8%;
     transform: translateY(-50%);
+    text-align: right;
+}
+
+.banner-frase p {
+    font-family: 'UtendoBold';
+    font-size: 28px;
+    color: #2f3418;
+    line-height: 1.4;
+    max-width: 400px;
+}
+
+
+footer {
+    background: #efe7ca;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    font-family: 'Utendo', sans-serif;
+}
+
+/* ===== DESKTOP (acima de 1024px) ===== */
+@media (min-width: 1025px) {
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 640px;
+        height: 360px;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3 {
+        opacity: 0.4;
+        width: 230px;
+        height: 330px;
+        left: 100px;
+        pointer-events: auto;
+    }
+
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        opacity: 0.4;
+        width: 230px;
+        height: 330px;
+        right: 100px;
+        left: auto;
+        pointer-events: auto;
+    }
+
+    .info {
+        width: 620px;
+        top: calc(32% + 210px);
+    }
+
+    .dots {
+        top: calc(32% + 190px);
+    }
+}
+
+/* ===== TABLET HORIZONTAL (821px até 1024px) ===== */
+@media (min-width: 821px) and (max-width: 1024px) {
+
+    
+
+    ul {
+        padding: 0 15px;
+        gap: 8px;
+    }
+
+    ul li a {
+        font-size: 13px;
+        margin-top: 0;
+        height: auto;
+        padding: 8px 12px;
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none;
+    }
+
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 420px;
+        height: 240px;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3 {
+        width: 180px;
+        height: 210px;
+        left: calc(50% - 290px);
+        opacity: 0.4;
+    }
+
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        width: 180px;
+        height: 210px;
+        right: calc(50% - 290px);
+        left: auto;
+        opacity: 0.4;
+    }
+
+    .info {
+        width: 420px;
+        top: calc(32% + 150px);
+    }
+
+    .dots {
+        top: calc(32% + 130px);
+    }
+
+    .btn {
+        top: 32%;
+    }
+}
+/* ===== TABLET VERTICAL ===== */
+@media (max-width: 1024px) and (orientation: portrait) {
+
+ 
+  .banner {
+     
+        height: 200px;
+        margin-top: -40vh;
+    }
+
+    .banner-frase p {
+        font-size: 20px;
+        max-width: 280px;
+    }
+    .cabeçario {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px !important;
+        gap: 4px;
+    }
+
+    ul a:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+        order: -1;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul li a {
+        margin-top: 0;
+        height: auto;
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.06);
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none !important;
+    }
+
+    .slide-item {
+        top: 18%;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3,
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 80vw;
+        height: 220px;
+    }
+
+    .dots {
+        top: calc(18% + 125px);
+    }
+
+    .info {
+        width: 80vw;
+        top: calc(18% + 140px);
+        font-size: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btn {
+        top: 18%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .prev { left: 8px; }
+    .next { right: 8px; }
+}
+
+
+/* ===== CELULAR (até 600px) ===== */
+@media (max-width: 600px) {
+
+    .banner {
+        height: 180px;
+        margin-top: -30vh;
+    }
+
+    .banner-frase p {
+        font-size: 18px;
+        max-width: 200px;
+    }
+     
+    .cabeçario {
+        height: auto;
+        padding: 12px 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 !important;
+        gap: 4px;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    ul a:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+        order: -1;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li a {
+        font-size: 11px;
+        padding: 4px 7px;
+        margin-top: 0;
+        height: auto;
+        width: auto;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.06);
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none !important;
+    }
+
+    .slide-item {
+        top: 20%;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3,
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 85vw;
+        height: 200px;
+    }
+
+    .dots {
+        top: calc(20% + 110px);
+    }
+
+    .info {
+        width: 85vw;
+        font-size: 14px;
+        top: calc(20% + 125px);
+    }
+
+    .info h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        top: 20%;
+        transform: translateY(-50%);
+        width: 38px;
+        height: 38px;
+    }
+
+    .btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .prev { left: 8px; }
+    .next { right: 8px; }
 }
