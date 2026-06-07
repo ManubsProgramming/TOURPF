@@ -1,0 +1,438 @@
+/*pfv ninguém mexa nas minhas coisas, sujeito a ataques físicos não convencionais*/
+
+@font-face {
+    font-family:'Utendo';
+    src:  url('Utendo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'UtendoBold';
+    src:  url('Utendo-Bold.ttf') format('truetype');
+
+}
+
+body{
+    background-color: #f7f4d9;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.hotel-icon {
+    margin-top: -15px;
+    margin-right: -230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.cachoeira-icon {
+    margin-top: -15px;
+    margin-right: -220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.nós-icon {
+    margin-top: -15px;
+    margin-right: -210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.comida-icon {
+    margin-top: -15px;
+    margin-right: -200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.cabeçario {
+    background: #e0d4a3;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 90px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 90px;
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+ul li a{
+    margin-top: 50px;
+    height: 80px;
+    width: 100px;
+    font-family: 'Utendo';
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a{
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ a :hover {
+    color:#697240;
+
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.hero {
+    text-align: center;
+    font-family: 'Utendo';
+    font-size: 22px;
+    padding-bottom: 5px;
+}
+
+.filter-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #D99126;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-family: 'Utendo', sans-serif;
+    font-weight: 600;
+    color: #1C3028;
+    font-size: 14px;
+}
+
+.filter-group label i {
+    color: #D99126;
+    margin-right: 5px;
+}
+
+.filter-group input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input.filtro-radio {
+    display: none !important;
+}
+
+.botoes-filtro {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-opcao {
+    background-color: #f4f4f4;
+    color: #1C3028;
+    border: 2px solid #ccc;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Utendo', sans-serif;
+    display: inline-block;
+    user-select: none;
+}
+
+.btn-opcao:hover {
+    border-color: #D99126;
+    color: #D99126;
+    background-color: #fff9f0;
+}
+
+#filtro-todos:checked ~ .filter-container .btn-opcao[for="filtro-todos"],
+#filtro-200:checked ~ .filter-container .btn-opcao[for="filtro-200"],
+#filtro-300:checked ~ .filter-container .btn-opcao[for="filtro-300"],
+#filtro-500:checked ~ .filter-container .btn-opcao[for="filtro-500"] {
+    background-color: #D99126;
+    color: white;
+    border-color: #D99126;
+    box-shadow: 0 4px 10px rgba(217, 145, 38, 0.3);
+}
+
+.dinamico-preco {
+    font-weight: bold;
+    color: #D99126;
+    margin-left: 5px;
+}
+
+#filtro-todos:checked ~ .filter-container .dinamico-preco::after { content: "Mostrar Todos"; }
+#filtro-200:checked ~ .filter-container .dinamico-preco::after { content: "R$ 200"; }
+#filtro-300:checked ~ .filter-container .dinamico-preco::after { content: "R$ 300"; }
+#filtro-500:checked ~ .filter-container .dinamico-preco::after { content: "R$ 500"; }
+
+#filtro-200:checked ~ .hotels-section .hotel-card:not(.p-200) {
+    display: none !important;
+}
+
+#filtro-300:checked ~ .hotels-section .hotel-card.p-500 {
+    display: none !important;
+}
+
+.hotels-section {
+    max-width: 1000px;
+    margin: 40px auto 60px auto; 
+    padding: 0 20px;
+}
+
+.hotels-section h3 {
+    color: #1C3028;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 35px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.hotels-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #D99126;
+    border-radius: 2px;
+}
+
+.hotels-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.hotel-card {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+}
+
+.hotel-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+    width: 300px;
+    min-width: 300px;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-1 { background-image: url('../imghoteis/localize.jpg'); }
+.img-2 { background-image: url('../imghoteis/urubui.jpg'); }
+.img-3 { background-image: url('../imghoteis/selvamarimari.jpg'); }
+.img-4 { background-image: url('../imghoteis/vilma.jpg'); }
+.img-5 { background-image: url('../cpma.jpg'); }
+.img-6 { background-image: url('../imghoteis/hotelamazongreen.jpg'); }
+
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.rating {
+    align-self: flex-start;
+    background-color: #fdf5e6;
+    color: #B5751D;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.rating i {
+    color: #D99126;
+    margin-right: 3px;
+}
+
+.rating span {
+    color: #666;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+.card-content h4 {
+    color: #1C3028;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.address {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.address i {
+    color: #2E4A3F;
+    margin-right: 5px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E4A3F;
+}
+
+.price small {
+    font-size: 13px;
+    color: #777;
+    font-weight: normal;
+}
+
+.badge {
+    background-color: #2E4A3F;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+    .hotel-card {
+        flex-direction: column;
+    }
+    
+    .card-image {
+        width: 100%;
+        min-width: 100%;
+        height: 200px;
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2E4A3F;
+}
+
+.price small {
+    font-size: 12px;
+    color: #777;
+    font-weight: normal;
+}
+
+.badge {
+    background-color: #2E4A3F;
+    color: white;
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.main-footer {
+    background-color: #1C3028; 
+    color: #a4b3ad;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 14px;
+}

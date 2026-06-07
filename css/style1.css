@@ -1,0 +1,230 @@
+@font-face {
+    font-family:'Utendo';
+    src:  url('Utendo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'UtendoBold';
+    src:  url('Utendo-Bold.ttf') format('truetype');
+
+}
+
+body{
+    background-color: #f7f4d9;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.hotel-icon {
+    margin-top: -15px;
+    margin-right: -230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.cachoeira-icon {
+    margin-top: -15px;
+    margin-right: -220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.nós-icon {
+    margin-top: -15px;
+    margin-right: -210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.comida-icon {
+    margin-top: -15px;
+    margin-right: -200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.cabeçario {
+    background: #e0d4a3;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 90px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 90px;
+  display: flex;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+ul li a{
+    margin-top: 50px;
+    height: 80px;
+    width: 100px;
+    font-family: 'Utendo';
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a{
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ a :hover {
+    color:#697240;
+
+}
+    
+    .banner{
+    background-image:url("https://www.turismoecia.net/wp-content/uploads/2023/02/07-MarioOliveira_MonumentodoIndioUrubui_PresidenteFigueiredo_AM-1-ate-03_04_23-1536x914.jpg");
+    background-size:cover;
+    background-position:center;
+    height:400px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    }
+    
+    .banner-texto{
+    background:rgba(0,0,0,0.55);
+    color:white;
+    text-align:center;
+    padding:30px;
+    border-radius:10px;
+    width:80%;
+    }
+    
+    .banner-texto h2{
+    font-size:50px;
+    margin-bottom:15px;
+    }
+    
+    .banner-texto p{
+    font-size:22px;
+    }
+    
+    main{
+    width:90%;
+    margin:40px auto;
+    }
+    
+    .evento{
+    display:flex;
+    gap:30px;
+    background:white;
+    padding:20px;
+    margin-bottom:30px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .evento img{
+    width:300px;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+    }
+    
+    .texto{
+    flex:1;
+    }
+    
+    .texto h2{
+    color:#205b2b;
+    margin-bottom:15px;
+    font-size:32px;
+    }
+    
+    .texto p{
+    line-height:1.7;
+    margin-bottom:20px;
+    font-size:18px;
+    }
+    
+    .texto a{
+    display:inline-block;
+    text-decoration:none;
+    background:#0b5e2b;
+    color:white;
+    padding:12px 22px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+    }
+    
+    .texto a:hover{
+    background:#08441f;
+    }
+    
+    footer{
+    background:#efe7ca;
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+    }
+    
+    @media(max-width:900px){
+    nav ul{
+    flex-direction:column;
+    gap:15px;
+    }
+    
+    .evento{
+    flex-direction:column;
+    }
+    
+    .evento img{
+    width:100%;
+    height:auto;
+    }
+    
+    .banner-texto h2{
+    font-size:35px;
+    }
+    
+    .banner-texto p{
+    font-size:18px;
+    }
+    }
