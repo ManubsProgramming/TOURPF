@@ -37,54 +37,74 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px 25px;
     max-width: 1200px;
-    margin: 0 auto;
-    padding:20px;
+    margin: 20px auto 40px;
+    padding: 20px;
 }
 
 .card-cachoeira {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0;
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(23, 63, 146, 0.12);
+    border: 1px solid rgba(27, 112, 204, 0.16);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-cachoeira:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 40px rgba(23, 63, 146, 0.18);
 }
 
 .card-img {
     position: relative;
     width: 100%;
-    height: 200px;
-    border-radius: 4px;
+    height: 260px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .card-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .card-titulo {
     position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    bottom: 12px;
+    left: 12px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.3;
+    display: inline-block;
+    padding: 5px 10px;
+    background: rgba(0, 82, 168, 0.78);
+    border-radius: 10px;
+    max-width: calc(100% - 34px);
+    text-shadow: none;
 }
 
 .card-info {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #000;
+    padding: 18px 20px 24px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #0e3c72;
+    background: #ffffff;
 }
 
 .card-info p {
-    margin-bottom: 2px;
+    margin: 0 0 10px;
 }
 
 .card-info strong {
+    display: block;
+    margin-bottom: 10px;
     font-weight: 700;
+    color: #1f4c8c;
 }
 
 /* Responsivo */
