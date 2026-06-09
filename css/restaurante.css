@@ -1,0 +1,122 @@
+@font-face{
+  font-family: 'Utendo';
+  src: url(utendo/Utendo-Regular.ttf) format('truetype');
+}
+
+@font-face{
+  font-family: 'Utendo Bold';
+  src: url(utendo/Utendo-Bold.ttf) format('truetype');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Utendo';
+}
+
+body{
+  background: #dde0c1;
+  padding: 30px;
+}
+
+.container{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card{
+  width: 30%;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.card h2{
+  margin-bottom: 8px;
+  color: #1b5240;
+  font-family: 'Utendo Bold';
+}
+
+.card p{
+  color: rgb(87, 85, 85);
+  margin-bottom: 10px;
+}
+
+.card span{
+  color: #15803d;
+  font-weight: bold;
+}
+
+.carrossel{
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden; 
+  cursor: grab;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carrossel img:hover{
+  transition: 0.3s;
+}
+
+.carrossel img{
+  flex: 0 0 100%;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  image-rendering: auto;
+  display: block;
+}
+
+.divisoria{
+  width: 100%;
+  margin:  40px 0 30px;
+  padding: 20px;
+  background: #143319;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0,08);
+}
+
+.divisoria h1{
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 40px;
+  font-family: 'Utendo Bold';
+}
+
+.divisoria p {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+details{
+  color: rgb(65, 111, 117);
+  
+}
+details p{
+  margin-top: 10px;
+}
+
+summary{
+  font-size: 14px;
+}
+
+.icone{
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ffffff;
+}
