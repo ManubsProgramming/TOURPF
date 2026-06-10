@@ -1,23 +1,130 @@
-@font-face{
-  font-family: 'Utendo';
-  src: url(utendo/Utendo-Regular.ttf) format('truetype');
+@font-face {
+    font-family:'Utendo';
+    src: url('../font/Utendo-Regular.ttf') format('truetype');
 }
 
-@font-face{
-  font-family: 'Utendo Bold';
-  src: url(utendo/Utendo-Bold.ttf) format('truetype');
+@font-face {
+    font-family:'UtendoBold';
+    src: url('../font/Utendo-Bold.ttf') format('truetype');
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Utendo';
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f4d9;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-body{
-  background: #dde0c1;
-  padding: 30px;
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.hotel-icon {
+    margin-top: -15px;
+    margin-right: -150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.cachoeira-icon {
+    margin-top: -15px;
+    margin-right: -140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.eventos-icon {
+    margin-top: -15px;
+    margin-right: -146px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.nós-icon {
+    margin-top: -15px;
+    margin-right: -125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.comida-icon {
+    margin-top: -15px;
+    margin-right: -130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+
+.cabeçario {
+    background: #e0d4a3;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    width: 100%;
+    height: 90px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 90px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a {
+    margin-top: 50px;
+    height: 80px;
+    width: 100px;
+    font-family: 'Utendo', sans-serif;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #697240;
 }
 
 .container{
