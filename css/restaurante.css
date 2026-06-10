@@ -83,9 +83,9 @@ body{
   width: 100%;
   margin:  40px 0 30px;
   padding: 20px;
-  background: #143319;
+  background: rgba(20, 51, 25, 0.75);
   border-radius: 15px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0,08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .divisoria h1{
