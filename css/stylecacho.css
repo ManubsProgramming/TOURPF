@@ -11,7 +11,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #f7f4d9;
+    background-color: transparent;
     overflow-x: hidden;
     box-sizing: border-box;
 }
@@ -51,11 +51,92 @@ body {
     box-shadow: 0 10px 30px rgba(23, 63, 146, 0.12);
     border: 1px solid rgba(27, 112, 204, 0.16);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
 }
 
 .card-cachoeira:hover {
     transform: translateY(-4px);
     box-shadow: 0 14px 40px rgba(23, 63, 146, 0.18);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    width: min(900px, 100%);
+    max-height: min(90vh, 800px);
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 28px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-body h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #0d3b72;
+}
+
+.modal-body p {
+    margin: 16px 0;
+    color: #22406d;
+    line-height: 1.75;
+}
+
+.modal-body p:last-child {
+    margin-bottom: 0;
+}
+
+#modal-features p {
+    margin: 8px 0;
+    color: #0e3c72;
+}
+
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.modal-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
+.modal .close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: #33415c;
+    cursor: pointer;
+}
+
+@media (max-width: 720px) {
+    .modal-gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 .card-img {
@@ -253,7 +334,7 @@ a:hover {
 }
 
 .active {
-    background-color: #04AA6D;
+    background-color: rgba(0, 0, 0, 0.12);
     color: white;
 }
 
@@ -269,6 +350,6 @@ a:hover {
 }
 
 .active {
-    background-color: #04AA6D;
+    background-color: rgba(0, 0, 0, 0.60);
     color: white;
 }

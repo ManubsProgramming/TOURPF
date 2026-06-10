@@ -218,6 +218,260 @@
                 </div>
             </article>
         </section>
+
+        <div id="cachoeira-modal" class="modal" aria-hidden="true">
+            <div class="modal-content" role="dialog" aria-modal="true">
+                <button class="close" type="button" aria-label="Fechar modal">×</button>
+                <div class="modal-body">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-description"></p>
+                    <div id="modal-features"></div>
+                    <div class="modal-gallery" id="modal-gallery"></div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const cachoeiras = {
+                "Cachoeira da Pedra Furada": {
+                    title: "Cachoeira da Pedra Furada",
+                    description: "A Pedra Furada é famosa por sua queda cristalina e pela formação rochosa que forma um arco natural.",
+                    features: [
+                        "Trilha leve de 1,8 km em meio à floresta.",
+                        "Piscina natural rasa ideal para famílias.",
+                        "Melhor horário para visitar: início da manhã ou fim de tarde."
+                    ],
+                    images: [
+                        "imgcachoeiras/pedra.webp",
+                        "imgcachoeiras/orquideas.jpeg"
+                    ]
+                },
+                "Caverna Refúgio do Maroaga": {
+                    title: "Caverna Refúgio do Maroaga",
+                    description: "O Maroaga combina cachoeira, gruta e poço cristalino em uma experiência de ecoturismo única.",
+                    features: [
+                        "A água é limpa e refrescante, própria para banho.",
+                        "Passeio guiado recomendado para conhecer a caverna e as quedas.",
+                        "O local é famoso por suas pedras coloridas e jardins naturais."
+                    ],
+                    images: [
+                        "imgcachoeiras/maroaga.webp",
+                        "imgcachoeiras/corredeira.jpg"
+                    ]
+                },
+                "Cachoeira de Iracema": {
+                    title: "Cachoeira de Iracema",
+                    description: "Iracema possui várias cascatas seguidas, criando um conjunto impressionante de quedas d'água.",
+                    features: [
+                        "Circuito de cachoeiras com nível de trilha moderado.",
+                        "Ótima para quem gosta de fotografia de natureza.",
+                        "Há pontos de descanso com vista privilegiada das águas."
+                    ],
+                    images: [
+                        "imgcachoeiras/iracema.webp",
+                        "imgcachoeiras/araras.jpg"
+                    ]
+                },
+                "Cachoeira do Mutum": {
+                    title: "Cachoeira do Mutum",
+                    description: "O Mutum é conhecido pela queda imponente e pelo poço tranquilo para banho.",
+                    features: [
+                        "Água fria e corrente forte no ponto principal.",
+                        "Possibilidade de trilha com guia local.",
+                        "Local indicado para quem busca contato com a fauna local." 
+                    ],
+                    images: [
+                        "imgcachoeiras/mutum.avif",
+                        "imgcachoeiras/pedra.webp"
+                    ]
+                },
+                "Cachoeira das Araras": {
+                    title: "Cachoeira das Araras",
+                    description: "A antiga trilha das araras leva a uma queda cercada por aves e mata preservada.",
+                    features: [
+                        "Vista panorâmica de paredões verdes.",
+                        "Ótimo ponto para observação de aves.",
+                        "Entrada com simpatia e suporte de guias locais."
+                    ],
+                    images: [
+                        "imgcachoeiras/araras.jpg",
+                        "imgcachoeiras/orquideas.jpeg"
+                    ]
+                },
+                "Cachoeira da Neblina": {
+                    title: "Cachoeira da Neblina",
+                    description: "A Neblina encanta pelo ambiente úmido e pela sensação de estar dentro da floresta amazônica.",
+                    features: [
+                        "Trilha imersa em vegetação densa.",
+                        "Banhos refrescantes em águas límpidas.",
+                        "Local de grande beleza para quem busca sossego."
+                    ],
+                    images: [
+                        "imgcachoeiras/orquideas.jpeg",
+                        "imgcachoeiras/corredeira.jpg"
+                    ]
+                },
+                "Cachoeira da Porteira": {
+                    title: "Cachoeira da Porteira",
+                    description: "A Porteira é um ponto de encontro entre trilha e cachoeira, perfeito para aventureiros.",
+                    features: [
+                        "Fácil acesso por estrada de terra.",
+                        "O local tem poço ideal para mergulhos curtos.",
+                        "Ponto tradicional para fotos e piqueniques."
+                    ],
+                    images: [
+                        "imgcachoeiras/pedra.webp",
+                        "imgcachoeiras/maroaga.webp"
+                    ]
+                },
+                "Cachoeira da Asframa": {
+                    title: "Cachoeira da Asframa",
+                    description: "A Asframa é visitada por famílias e grupos que buscam um dia de lazer com infraestrutura básica.",
+                    features: [
+                        "Acesso com estacionamento próximo.",
+                        "Boas áreas de sombra para descanso.",
+                        "Água transparente e fácil caminhada até a queda."
+                    ],
+                    images: [
+                        "imgcachoeiras/corredeira.jpg",
+                        "imgcachoeiras/iracema.webp"
+                    ]
+                },
+                "Cachoeira dos Pássaros": {
+                    title: "Cachoeira dos Pássaros",
+                    description: "O nome vem das aves que acompanham a trilha até a queda principal.",
+                    features: [
+                        "Trilha curta e com grandes árvores.",
+                        "Melhor horário: início da manhã para ouvir os pássaros.",
+                        "Ótimo local para relaxar após a caminhada."
+                    ],
+                    images: [
+                        "imgcachoeiras/araras.jpg",
+                        "imgcachoeiras/mutum.avif"
+                    ]
+                },
+                "Cachoeira das Lages": {
+                    title: "Cachoeira das Lages",
+                    description: "A Lages é ideal para quem gosta de grandes quedas com cenário verde abundante.",
+                    features: [
+                        "Água cristalina que forma piscinas naturais.",
+                        "Paisagem cercada por rochas e matas.",
+                        "Percurso de fácil acesso a partir da estrada principal."
+                    ],
+                    images: [
+                        "imgcachoeiras/orquideas.jpeg",
+                        "imgcachoeiras/pedra.webp"
+                    ]
+                },
+                "Cachoeira Natal": {
+                    title: "Cachoeira Natal",
+                    description: "A Natal oferece águas tranquilas e pontos de contemplação para toda a família.",
+                    features: [
+                        "Cachoeira com poço amplo para banho.",
+                        "Localização em um ramal preservado.",
+                        "Cenário ideal para fotos em grupos."
+                    ],
+                    images: [
+                        "imgcachoeiras/corredeira.jpg",
+                        "imgcachoeiras/orquideas.jpeg"
+                    ]
+                },
+                "Cachoeira do Éden": {
+                    title: "Cachoeira do Éden",
+                    description: "O Éden é um refúgio natural com queda de água serena e vasta vegetação ao redor.",
+                    features: [
+                        "Trilha curta que atravessa jardins naturais.",
+                        "Poço calmo para banho e descanso.",
+                        "As margens têm espaços para fotos e piqueniques."
+                    ],
+                    images: [
+                        "imgcachoeiras/iracema.webp",
+                        "imgcachoeiras/marum.webp"
+                    ]
+                },
+                "Lagoa Cristalina": {
+                    title: "Lagoa Cristalina",
+                    description: "A Lagoa Cristalina é um recanto sereno com águas claras e areia fina.",
+                    features: [
+                        "Ideal para natação e descanso.",
+                        "Pontos de sombra ao redor da lagoa.",
+                        "Trilha de acesso leve e agradável."
+                    ],
+                    images: [
+                        "imgcachoeiras/orquideas.jpeg",
+                        "imgcachoeiras/pedra.webp"
+                    ]
+                },
+                "Corredeira do Urubuí": {
+                    title: "Corredeira do Urubuí",
+                    description: "A corredeira tem águas rápidas e piscinas naturais com muita energia amazônica.",
+                    features: [
+                        "Ótima para quem gosta de correnteza moderada.",
+                        "Ambiente cercado por pedras e mata.",
+                        "Acesso fácil pela área urbana local."
+                    ],
+                    images: [
+                        "imgcachoeiras/corredeira.jpg",
+                        "imgcachoeiras/mutum.avif"
+                    ]
+                },
+                "Cachoeira das Orquídeas": {
+                    title: "Cachoeira das Orquídeas",
+                    description: "A cachoeira das Orquídeas é famosa pelas flores silvestres e pelo vale encantador.",
+                    features: [
+                        "Trilha com muitas orquídeas e árvores centenárias.",
+                        "Local ideal para quem busca contato com a flora local.",
+                        "Ótima opção para um passeio tranquilo."
+                    ],
+                    images: [
+                        "imgcachoeiras/orquideas.jpeg",
+                        "imgcachoeiras/araras.jpg"
+                    ]
+                }
+            };
+
+            const modal = document.getElementById('cachoeira-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+            const modalFeatures = document.getElementById('modal-features');
+            const modalGallery = document.getElementById('modal-gallery');
+            const closeModalButton = modal.querySelector('.close');
+
+            function showModal(key) {
+                const item = cachoeiras[key];
+                if (!item) return;
+                modalTitle.textContent = item.title;
+                modalDescription.textContent = item.description;
+                modalFeatures.innerHTML = item.features.map(feature => `<p>• ${feature}</p>`).join('');
+                modalGallery.innerHTML = item.images.map(src => `<img src="${src}" alt="Imagem de ${item.title}">`).join('');
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+            }
+
+            function hideModal() {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+            }
+
+            document.querySelectorAll('.card-cachoeira').forEach(card => {
+                card.addEventListener('click', () => {
+                    const titleElement = card.querySelector('.card-titulo');
+                    if (!titleElement) return;
+                    const key = titleElement.innerText.replace(/\s+/g, ' ').trim();
+                    showModal(key);
+                });
+            });
+
+            closeModalButton.addEventListener('click', hideModal);
+            modal.addEventListener('click', event => {
+                if (event.target === modal) hideModal();
+            });
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape' && modal.classList.contains('active')) {
+                    hideModal();
+                }
+            });
+        </script>
     </main>
     </body>
 </html>
