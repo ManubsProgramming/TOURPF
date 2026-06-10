@@ -418,12 +418,13 @@ footer {
 
     .info {
         width: 620px;
-        top: calc(32% + 210px);
+        top: calc(32% + 250px);
     }
 
-    .dots {
-        top: calc(32% + 190px);
-    }
+
+ .dots {
+            top: calc(32% + 230px);   /* ← era +190px */
+        }
 
     .banner {
         margin-top: 20px;
