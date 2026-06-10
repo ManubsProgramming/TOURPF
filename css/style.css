@@ -370,8 +370,19 @@ footer {
     font-family: 'Utendo', sans-serif;
 }
 
+
 /* ===== DESKTOP (acima de 1024px) ===== */
 @media (min-width: 1025px) {
+
+    .carrossel {
+        min-height: 600px;
+        padding-bottom: 0;
+        padding-top: 40px;   /* ← adiciona isso */
+    }
+    .slides-container {
+        height: 600px;
+    }
+
     #s1:checked ~ .slides-container #slide1,
     #s2:checked ~ .slides-container #slide2,
     #s3:checked ~ .slides-container #slide3,
@@ -387,7 +398,8 @@ footer {
         opacity: 0.4;
         width: 230px;
         height: 330px;
-        left: 100px;
+        left: calc(50% - 560px);   /* ← ATUALIZADO */
+        transform: translateY(-50%);
         pointer-events: auto;
     }
 
@@ -398,8 +410,9 @@ footer {
         opacity: 0.4;
         width: 230px;
         height: 330px;
-        right: 100px;
-        left: auto;
+        left: calc(50% + 330px);   /* ← ATUALIZADO */
+        right: auto;
+        transform: translateY(-50%);
         pointer-events: auto;
     }
 
@@ -411,8 +424,11 @@ footer {
     .dots {
         top: calc(32% + 190px);
     }
-}
 
+    .banner {
+        margin-top: 20px;
+    }
+}
 /* ===== TABLET HORIZONTAL (821px até 1024px) ===== */
 @media (min-width: 821px) and (max-width: 1024px) {
 
