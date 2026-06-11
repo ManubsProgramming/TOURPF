@@ -11,7 +11,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #f7f4d9;
+    background-color: transparent;
     overflow-x: hidden;
     box-sizing: border-box;
 }
@@ -48,14 +48,96 @@ body {
     background: #ffffff;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(23, 63, 146, 0.12);
-    border: 1px solid rgba(27, 112, 204, 0.16);
+    box-shadow: 0 10px 30px rgba(21, 80, 34, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.16);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
 }
 
 .card-cachoeira:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 40px rgba(23, 63, 146, 0.18);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(128, 112, 112, 0.7);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    width: min(900px, 100%);
+    max-height: min(90vh, 800px);
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 28px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(42, 94, 53, 0.25);
+}
+
+.modal-body h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #000000;
+    font-family: 'Utendo', sans-serif;
+}
+
+.modal-body p {
+    margin: 16px 0;
+    color: #000000;
+    line-height: 1.75;
+}
+
+.modal-body p:last-child {
+    margin-bottom: 0;
+    font-family: 'Utendo', sans-serif;
+}
+
+#modal-features p {
+    margin: 8px 0;
+    color: #000000;
+    font-family: 'Utendo', sans-serif;
+}
+
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.modal-gallery img {
+    width: 100%;
+        height: 300px;
+    display: block;
+}
+
+.modal .close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: #33415c;
+    cursor: pointer;
+}
+
+@media (max-width: 720px) {
+    .modal-gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 .card-img {
@@ -82,29 +164,31 @@ body {
     line-height: 1.3;
     display: inline-block;
     padding: 5px 10px;
-    background: rgba(0, 82, 168, 0.78);
+    background: rgba(14, 48, 22, 0.78);
     border-radius: 10px;
     max-width: calc(100% - 34px);
     text-shadow: none;
+    font-family: 'Utendo', sans-serif;
 }
 
 .card-info {
     padding: 18px 20px 24px;
     font-size: 15px;
     line-height: 1.7;
-    color: #0e3c72;
+    color: #000000;
     background: #ffffff;
 }
 
 .card-info p {
     margin: 0 0 10px;
+    font-family: 'Utendo', sans-serif;
 }
 
 .card-info strong {
     display: block;
     margin-bottom: 10px;
     font-weight: 700;
-    color: #1f4c8c;
+    color: #124432;
 }
 
 /* Responsivo */
@@ -219,6 +303,43 @@ html, body {
     box-sizing: border-box;
 }
 
+.divisoria {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 20px 20px 14px;
+    background: #3f552b;
+    border: none;
+    border-bottom: 4px solid #2e3f21;
+    border-radius: 0;
+    box-shadow: 0 24px 60px rgba(25, 34, 18, 0.22);
+    text-align: center;
+}
+
+
+.divisoria > * {
+    position: relative;
+    z-index: 1;
+}
+
+.divisoria h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 2vw, 2.25rem);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: center;
+}
+
+.divisoria p {
+    margin: 14px auto 0;
+    max-width: 760px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    line-height: 1.75;
+    text-align: center;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -253,7 +374,7 @@ a:hover {
 }
 
 .active {
-    background-color: #04AA6D;
+    background-color: rgba(0, 0, 0, 0.12);
     color: white;
 }
 
@@ -269,6 +390,6 @@ a:hover {
 }
 
 .active {
-    background-color: #04AA6D;
+    background-color: rgba(0, 0, 0, 0.60);
     color: white;
 }

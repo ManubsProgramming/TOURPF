@@ -164,12 +164,15 @@ html {
     max-width:900px;
     margin:0 auto;
     line-height:1.1;
+    font-family: 'Poppins', sans-serif;
+    
 }
 
 .hero-text p{
     font-family:'Playfair Display', serif;
     font-size:15px;
     margin-top:10px;
+    font-family: 'Utendo', sans-serif;
 }
 
 /* CARDS */
@@ -195,6 +198,7 @@ html {
     margin-top:15px;
     font-family:'Playfair Display', serif;
     letter-spacing:3px;
+    font-family: 'Utendo', sans-serif;
 }
 
 /* SOBRE */
@@ -215,16 +219,18 @@ html {
 
 .sobre-texto{
     max-width:500px;
+    font-family: 'Utendo', sans-serif;
 }
 
 .sobre-texto h2{
-    font-family:'Playfair Display', serif;
     font-size:45px;
     margin-bottom:20px;
+    font-family: 'Utendo', sans-serif;
 }
 
 .sobre-texto p{
     line-height:1.8;
+    font-family: 'Utendo', sans-serif;
 }
 
 .sobre-texto button{
@@ -253,9 +259,9 @@ html {
 }
 
 .blog h2{
-    font-family:'Playfair Display', serif;
     font-size:45px;
     margin-bottom:50px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .posts{
@@ -277,6 +283,7 @@ html {
 .post h3{
     margin-top:15px;
     font-family:'Playfair Display', serif;
+    font-family: 'Utendo', sans-serif;
 }
 
 /* RESPONSIVO */
