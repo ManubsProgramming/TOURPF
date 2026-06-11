@@ -134,7 +134,7 @@ html {
 /* HERO */
 
 .hero{
-    height:700px;
+    height:600px;
     background-image:url("https://noarportal.com.br/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-20-at-10.02.20.jpeg");
     background-size:cover;
     background-position:center;
@@ -159,7 +159,7 @@ html {
 }
 
 .hero-text h1{
-    font-family:'Playfair Display', serif;
+    font-family:'utendoBold', sans-serif;
     font-size:60px;
     max-width:900px;
     margin:0 auto;
@@ -169,7 +169,7 @@ html {
 }
 
 .hero-text p{
-    font-family:'Playfair Display', serif;
+    font-family:'utendoBold', sans-serif;
     font-size:15px;
     margin-top:10px;
     font-family: 'Utendo', sans-serif;
@@ -196,23 +196,13 @@ html {
 
 .card h3{
     margin-top:15px;
-    font-family:'Playfair Display', serif;
+    font-family:'utendoBold', sans-serif;
     letter-spacing:3px;
     font-family: 'Utendo', sans-serif;
 }
 
-/* SOBRE */
 
-.sobre{
-    background:#788467;
-    color:white;
-    padding:80px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:60px;
-}
-
+/*colaboradores*/
 .sobre-img img{
     width:450px;
 }
@@ -251,40 +241,223 @@ html {
     text-decoration:none;
 }
 
-/* BLOG */
 
-.blog{
-    padding:100px 80px;
+H2{
+    font-family:'utendoBold', sans-serif;
+    font-size:45px;
+    margin-bottom:20px;
+    text-align:center;
+}
+.carousel{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding:20px;
+}
+
+.card{
+    min-width:300px;
+    background:#e0d4a3;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
     text-align:center;
 }
 
-.blog h2{
-    font-size:45px;
-    margin-bottom:50px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.posts{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-}
-
-.post{
-    width:300px;
-}
-
-.post img{
-    width:100%;
-    height:350px;
+.card img{
+    width:120px;
+    height:120px;
     object-fit:cover;
+    border-radius:50%;
 }
+
 
 .post h3{
     margin-top:15px;
     font-family:'Playfair Display', serif;
+    font-family: 'Utendo', sans-serif;}
+
+@keyframes deslizar{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+
+/*desenvolvimento*/
+.desenvolvimento{
+    background: #788467;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* linhas orgânicas */
+.desenvolvimento::before{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -50px;
+    width: 600px;
+    height: 250px;
+    background: url("img/linha.svg") no-repeat;
+    background-size: contain;
+    opacity: .25;
+}
+
+/* bolinhas */
+.desenvolvimento::after{
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 120px;
+    height: 120px;
+    background-image:
+        radial-gradient(#b7c8c1 2px, transparent 2px);
+    background-size: 20px 20px;
+    opacity: .8;
+}
+
+.container-desenvolvimento{
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #f7f4d9;
+    border-radius: 50px;
+    padding: 80px 60px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 5px 25px rgba(0,0,0,.05);
+}
+
+.desenvolvimento h2{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #0f2e20;
+    margin-bottom: 20px;
+}
+
+.desenvolvimento h2::after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 5px;
+    background: #5f9c82;
+    margin: 20px auto 0;
+    border-radius: 20px;
+}
+.etapas{
+    
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.etapa{
+    width: 220px;
+    text-align: center;
+}
+
+.etapa img{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.etapa h3{
+    font-size: 1.2rem;
+    color: #123524;
+    font-weight: 600;
+}
+
+
+
+
+/*DEPOIMENTOS*/
+.depoimentos{
+    background: #f7f4d9;
+    padding: 100px 5%;
+}
+
+.depoimentos h2{
+    text-align: center;
+    font-size: 3rem;
+    color: #123524;
+    margin-bottom: 60px;
+}
+
+.depoimentos h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: #5f9c82;
+    margin: 15px auto;
+    border-radius: 20px;
+}
+
+.cards-depoimentos{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-depoimento{
+    width: 320px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.card-depoimento:hover{
+    transform: translateY(-5px);
+}
+
+.card-depoimento p{
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card-depoimento h4{
+    color: #123524;
+    font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
+/*footer*/
+footer {
+    background: #efe7ca;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
     font-family: 'Utendo', sans-serif;
 }
+
+
 
 /* RESPONSIVO */
 
