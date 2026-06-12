@@ -208,6 +208,27 @@ a:hover {
     font-family: 'Poppins', sans-serif;
 }
 
+/* barra de pesquisa padrão (20px, fundo verde) */
+.barra-pesquisa {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 90px;
+    box-sizing: border-box;
+}
+.barra-pesquisa form { display: flex; align-items: center; }
+.barra-pesquisa input[type="search"] {
+    height: 20px;
+    background: green;
+    color: #fff;
+    border: none;
+    padding: 0 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.barra-pesquisa input[type="search"]::placeholder { color: rgba(255,255,255,0.8); }
+
 .divisoria > * {
     position: relative;
     z-index: 1;
