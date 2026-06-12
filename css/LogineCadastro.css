@@ -243,4 +243,342 @@ form button:hover{
         width:100%;
         left:0;
     }
+
 }
+
+/* ===== DESKTOP (acima de 1024px) ===== */
+@media (min-width: 1025px) {
+
+    .carrossel {
+        min-height: 600px;
+        padding-bottom: 0;
+        padding-top: 40px;   /* ← adiciona isso */
+    }
+    .slides-container {
+        height: 600px;
+    }
+
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 640px;
+        height: 360px;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3 {
+        opacity: 0.4;
+        width: 230px;
+        height: 330px;
+        left: calc(50% - 560px);   /* ← ATUALIZADO */
+        transform: translateY(-50%);
+        pointer-events: auto;
+    }
+
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        opacity: 0.4;
+        width: 230px;
+        height: 330px;
+        left: calc(50% + 330px);   /* ← ATUALIZADO */
+        right: auto;
+        transform: translateY(-50%);
+        pointer-events: auto;
+    }
+
+    .info {
+        width: 620px;
+        top: calc(32% + 250px);
+    }
+
+
+ .dots {
+            top: calc(32% + 230px);   /* ← era +190px */
+        }
+
+    .banner {
+        margin-top: 20px;
+    }
+}
+/* ===== TABLET HORIZONTAL (821px até 1024px) ===== */
+@media (min-width: 821px) and (max-width: 1024px) {
+
+    
+
+    ul {
+        padding: 0 15px;
+        gap: 8px;
+    }
+
+    ul li a {
+        font-size: 13px;
+        margin-top: 0;
+        height: auto;
+        padding: 8px 12px;
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none;
+    }
+
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 420px;
+        height: 240px;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3 {
+        width: 180px;
+        height: 210px;
+        left: calc(50% - 290px);
+        opacity: 0.4;
+    }
+
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        width: 180px;
+        height: 210px;
+        right: calc(50% - 290px);
+        left: auto;
+        opacity: 0.4;
+    }
+
+    .info {
+        width: 420px;
+        top: calc(32% + 150px);
+    }
+
+    .dots {
+        top: calc(32% + 130px);
+    }
+
+    .btn {
+        top: 32%;
+    }
+}
+/* ===== TABLET VERTICAL ===== */
+@media (max-width: 1024px) and (orientation: portrait) {
+
+ 
+  .banner {
+     
+        height: 200px;
+        margin-top: -40vh;
+    }
+
+    .banner-frase p {
+        font-size: 20px;
+        max-width: 280px;
+    }
+    .cabeçario {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px !important;
+        gap: 4px;
+    }
+
+    ul a:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+        order: -1;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul li a {
+        margin-top: 0;
+        height: auto;
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.06);
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none !important;
+    }
+
+    .slide-item {
+        top: 18%;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3,
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 80vw;
+        height: 220px;
+    }
+
+    .dots {
+        top: calc(18% + 125px);
+    }
+
+    .info {
+        width: 80vw;
+        top: calc(18% + 140px);
+        font-size: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btn {
+        top: 18%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .prev { left: 8px; }
+    .next { right: 8px; }
+}
+
+
+/* ===== CELULAR (até 600px) ===== */
+@media (max-width: 600px) {
+
+    .banner {
+        height: 180px;
+        margin-top: -30vh;
+    }
+
+    .banner-frase p {
+        font-size: 18px;
+        max-width: 200px;
+    }
+     
+    .cabeçario {
+        height: auto;
+        padding: 12px 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 !important;
+        gap: 4px;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    ul a:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+        order: -1;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li a {
+        font-size: 11px;
+        padding: 4px 7px;
+        margin-top: 0;
+        height: auto;
+        width: auto;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.06);
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none !important;
+    }
+
+    .slide-item {
+        top: 20%;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3,
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 85vw;
+        height: 200px;
+    }
+
+    .dots {
+        top: calc(20% + 110px);
+    }
+
+    .info {
+        width: 85vw;
+        font-size: 14px;
+        top: calc(20% + 125px);
+    }
+
+    .info h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        top: 20%;
+        transform: translateY(-50%);
+        width: 38px;
+        height: 38px;
+    }
+
+    .btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .prev { left: 8px; }
+    .next { right: 8px; }
+}
+
