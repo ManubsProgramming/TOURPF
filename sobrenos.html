@@ -10,8 +10,7 @@
     
 </head>
 <body>
-
-    <header class="cabeçario">
+<header class="cabeçario">
 
         <ul>
             <a href="index.html">
@@ -32,6 +31,20 @@
             <img class="hotel-icon" src="imgPrincipal/hoteis.png" alt="hotel" width="30px">
             <li><a href="hotel.html">Hotel</a></li>
         </ul>
+
+    <div class="menu-container">
+    <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+
+    <div class="login-box" id="loginBox">
+        <h3>Área do Usuário</h3>
+        <p>Faça login para acessar recursos exclusivos.</p>
+   <button class="btn-login"
+     onclick="window.location.href='loginEcadastro.html'">
+    Login
+</button>
+    </div>
+</div>
+
     </header>
 
 
@@ -61,17 +74,18 @@
 
     <div class="carousel">
         <div class="card">
-            <img src="img/manuela.jpg" alt="">
-            <h3>Manuela Fernandes</h3>
+            <img src="imgSobreNos/manuft.jpeg" alt="">
+            <h3>MANUELA FERNANDES</h3>
             <p>
                 Auxiliou na criação de repositórios no GitHub e no uso do Git, 
-                oferecendo suporte à equipe e colaborando sempre que necessário.Tela sobre nós.
+                oferecendo suporte à equipe e colaborando sempre que necessário.
+                Tela sobre nós e Tela de login e cadastro.
             </p>
         </div>
 
         <div class="card">
-            <img src="img/rebeca.jpg" alt="">
-            <h3>Rebeca Isabela</h3>
+            <img src="imgSobreNos/rebecaft.jpeg" alt="">
+            <h3>REBECA ISABELA</h3>
             <p>
                 Atuou na criação da identidade visual e
                 desenvolvimento do layout e Css. E tela principal do projeto.
@@ -80,7 +94,7 @@
 
 
         <div class="card">
-            <img src="img/rebeca.jpg" alt="">
+            <img src="imgSobreNos/aliceft.jpeg" alt="">
             <h3>ALICE GOES</h3>
             <p>
                 Auxiliou na prototipagem, contribuindo com ideias de estilos visuais e com o desenvolvimento da tela do hotel.
@@ -89,7 +103,7 @@
 
 
         <div class="card">
-            <img src="img/rebeca.jpg" alt="">
+            <img src="imgSobreNos/celenaft.jpeg" alt="">
             <h3>CELENA LIMA</h3>
             <p>
                  Responsável pelo levantamento de requisitos,documentação e organização do projeto, 
@@ -99,7 +113,7 @@
         </div>
 
         <div class="card">
-            <img src="img/rebeca.jpg" alt="">
+            <img src="imgSobreNos/sammillyft.jpeg" alt="">
             <h3>SAMMILLY</h3>
             <p>
                Contribuiu para o desenvolvimento da página do restaurante, 
@@ -109,14 +123,14 @@
 
 
         <div class="card">
-            <img src="img/rebeca.jpg" alt="">
-            <h3>MARSXWELL</h3>
+            <img src="imgSobreNos/" alt="">
+            <h3>MASXWELL</h3>
             <p>
                 <A></A>Auxiliou na elaboração dos casos de uso e desenvolveu a página de eventos do projeto.
             </p>
         </div>
 <div class="card">
-            <img src="img/rebeca.jpg" alt="">
+            <img src="imgSobreNos/biancaft.jpeg" alt="">
             <h3>BIANCA</h3>
             <p>
                 Participou da apresentação do projeto, contribuindo para a comunicação
@@ -203,7 +217,28 @@
 <footer>
         <p>© 2026 - Manuela Fernandes </p>
     </footer>
-      
+      <!--script para o menu de login-->
+      <script>
+function toggleMenu(){
+    document
+        .getElementById("loginBox")
+        .classList.toggle("active");
+}
+
+document.addEventListener("click", function(e){
+
+    const box = document.getElementById("loginBox");
+    const btn = document.querySelector(".menu-btn");
+
+    if(
+        !box.contains(e.target) &&
+        !btn.contains(e.target)
+    ){
+        box.classList.remove("active");
+    }
+});
+</script>
+
 
 
 </body>

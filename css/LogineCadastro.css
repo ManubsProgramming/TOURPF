@@ -1,0 +1,584 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e0d4a3;
+}
+
+.container{
+    position:relative;
+    width:900px;
+    height:550px;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+/* Formulários */
+
+.form-container{
+    position:absolute;
+    top:0;
+    width:60%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.6s ease-in-out;
+}
+
+.form-container form{
+    width:80%;
+    text-align:center;
+}
+
+.login{
+    left:40%;
+    z-index:2;
+}
+
+.register{
+    left:40%;
+    opacity:0;
+    z-index:1;
+}
+
+.container.active .login{
+    opacity:0;
+    z-index:1;
+}
+
+.container.active .register{
+    opacity:1;
+    z-index:5;
+}
+
+.icon{
+    width:80px;
+    height:80px;
+    margin:auto;
+    margin-bottom:20px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    color:white;
+    background:linear-gradient(135deg,#316a21,#90b040);
+}
+
+h2{
+    color:#d6bb50;
+    margin-bottom:25px;
+}
+
+.input-box{
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid #ccc;
+    margin-bottom:20px;
+    padding:10px;
+}
+
+.input-box i{
+    margin-right:10px;
+    color:#999;
+}
+
+.input-box input{
+    width:100%;
+    border:none;
+    outline:none;
+}
+
+form button{
+    border:none;
+    padding:12px 35px;
+    border-radius:30px;
+    background: #37b880;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+form button:hover{
+    background:#054c3f;
+}
+
+/* Botão Voltar */
+.btn-voltar{
+    position:absolute;
+    top:20px;
+    left:20px;
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:white;
+    color:#199b5a;
+
+    border-radius:50%;
+    text-decoration:none;
+    font-size:20px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.btn-voltar:hover{
+    transform:scale(1.1);
+}
+
+/* Painel Rosa */
+
+.overlay{
+    position:absolute;
+    left:0;
+    top:0;
+    width:40%;
+    height:100%;
+    background:linear-gradient(
+    135deg,
+    #e0d4a3,
+    #978642,
+    #e7bfd5);
+    z-index:10;
+    transition:.6s ease-in-out;
+}
+
+.overlay::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(255,255,255,.15);
+    transform:rotate(45deg);
+    left:-150px;
+}
+
+.overlay::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:rgba(255,255,255,.1);
+    transform:rotate(45deg);
+    left:-60px;
+}
+
+.container.active .overlay{
+    left:60%;
+}
+
+.overlay-content{
+    height:100%;
+    position:relative;
+}
+
+.panel{
+    position:absolute;
+    width:100%;
+    height:100%;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.panel h2{
+    color:white;
+}
+
+.panel button{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#66b786;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.register-panel{
+    opacity:0;
+}
+
+.container.active .register-panel{
+    opacity:1;
+}
+
+.container.active .login-panel{
+    opacity:0;
+}
+
+@media(max-width:768px){
+
+    .container{
+        width:95%;
+        height:auto;
+        min-height:700px;
+    }
+
+    .overlay{
+        display:none;
+    }
+
+    .form-container{
+        width:100%;
+        left:0;
+    }
+
+}
+
+/* ===== DESKTOP (acima de 1024px) ===== */
+@media (min-width: 1025px) {
+
+    .carrossel {
+        min-height: 600px;
+        padding-bottom: 0;
+        padding-top: 40px;   /* ← adiciona isso */
+    }
+    .slides-container {
+        height: 600px;
+    }
+
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 640px;
+        height: 360px;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3 {
+        opacity: 0.4;
+        width: 230px;
+        height: 330px;
+        left: calc(50% - 560px);   /* ← ATUALIZADO */
+        transform: translateY(-50%);
+        pointer-events: auto;
+    }
+
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        opacity: 0.4;
+        width: 230px;
+        height: 330px;
+        left: calc(50% + 330px);   /* ← ATUALIZADO */
+        right: auto;
+        transform: translateY(-50%);
+        pointer-events: auto;
+    }
+
+    .info {
+        width: 620px;
+        top: calc(32% + 250px);
+    }
+
+
+ .dots {
+            top: calc(32% + 230px);   /* ← era +190px */
+        }
+
+    .banner {
+        margin-top: 20px;
+    }
+}
+/* ===== TABLET HORIZONTAL (821px até 1024px) ===== */
+@media (min-width: 821px) and (max-width: 1024px) {
+
+    
+
+    ul {
+        padding: 0 15px;
+        gap: 8px;
+    }
+
+    ul li a {
+        font-size: 13px;
+        margin-top: 0;
+        height: auto;
+        padding: 8px 12px;
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none;
+    }
+
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 420px;
+        height: 240px;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3 {
+        width: 180px;
+        height: 210px;
+        left: calc(50% - 290px);
+        opacity: 0.4;
+    }
+
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        width: 180px;
+        height: 210px;
+        right: calc(50% - 290px);
+        left: auto;
+        opacity: 0.4;
+    }
+
+    .info {
+        width: 420px;
+        top: calc(32% + 150px);
+    }
+
+    .dots {
+        top: calc(32% + 130px);
+    }
+
+    .btn {
+        top: 32%;
+    }
+}
+/* ===== TABLET VERTICAL ===== */
+@media (max-width: 1024px) and (orientation: portrait) {
+
+ 
+  .banner {
+     
+        height: 200px;
+        margin-top: -40vh;
+    }
+
+    .banner-frase p {
+        font-size: 20px;
+        max-width: 280px;
+    }
+    .cabeçario {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px !important;
+        gap: 4px;
+    }
+
+    ul a:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+        order: -1;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul li a {
+        margin-top: 0;
+        height: auto;
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.06);
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none !important;
+    }
+
+    .slide-item {
+        top: 18%;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3,
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 80vw;
+        height: 220px;
+    }
+
+    .dots {
+        top: calc(18% + 125px);
+    }
+
+    .info {
+        width: 80vw;
+        top: calc(18% + 140px);
+        font-size: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btn {
+        top: 18%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .prev { left: 8px; }
+    .next { right: 8px; }
+}
+
+
+/* ===== CELULAR (até 600px) ===== */
+@media (max-width: 600px) {
+
+    .banner {
+        height: 180px;
+        margin-top: -30vh;
+    }
+
+    .banner-frase p {
+        font-size: 18px;
+        max-width: 200px;
+    }
+     
+    .cabeçario {
+        height: auto;
+        padding: 12px 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 !important;
+        gap: 4px;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    ul a:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+        order: -1;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li a {
+        font-size: 11px;
+        padding: 4px 7px;
+        margin-top: 0;
+        height: auto;
+        width: auto;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.06);
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none !important;
+    }
+
+    .slide-item {
+        top: 20%;
+    }
+
+    #s1:checked ~ .slides-container #slide4,
+    #s2:checked ~ .slides-container #slide1,
+    #s3:checked ~ .slides-container #slide2,
+    #s4:checked ~ .slides-container #slide3,
+    #s1:checked ~ .slides-container #slide2,
+    #s2:checked ~ .slides-container #slide3,
+    #s3:checked ~ .slides-container #slide4,
+    #s4:checked ~ .slides-container #slide1 {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #s1:checked ~ .slides-container #slide1,
+    #s2:checked ~ .slides-container #slide2,
+    #s3:checked ~ .slides-container #slide3,
+    #s4:checked ~ .slides-container #slide4 {
+        width: 85vw;
+        height: 200px;
+    }
+
+    .dots {
+        top: calc(20% + 110px);
+    }
+
+    .info {
+        width: 85vw;
+        font-size: 14px;
+        top: calc(20% + 125px);
+    }
+
+    .info h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        top: 20%;
+        transform: translateY(-50%);
+        width: 38px;
+        height: 38px;
+    }
+
+    .btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .prev { left: 8px; }
+    .next { right: 8px; }
+}
+

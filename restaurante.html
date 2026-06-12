@@ -32,6 +32,19 @@
             <img class="hotel-icon" src="imgPrincipal/hoteis.png" alt="hotel" width="30px">
             <li><a href="hotel.html">Hotel</a></li>
         </ul>
+        
+    <div class="menu-container">
+    <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+
+    <div class="login-box" id="loginBox">
+        <h3>Área do Usuário</h3>
+        <p>Faça login para acessar recursos exclusivos.</p>
+   <button class="btn-login"
+     onclick="window.location.href='loginEcadastro.html'">
+    Login
+</button>
+    </div>
+</div>
     </header>
 
 
@@ -165,5 +178,27 @@
   <footer>
         <p>© 2026 - Samilly Soares</p>
     </footer>
+     <!--script para o menu de login-->
+      <script>
+function toggleMenu(){
+    document
+        .getElementById("loginBox")
+        .classList.toggle("active");
+}
+
+document.addEventListener("click", function(e){
+
+    const box = document.getElementById("loginBox");
+    const btn = document.querySelector(".menu-btn");
+
+    if(
+        !box.contains(e.target) &&
+        !btn.contains(e.target)
+    ){
+        box.classList.remove("active");
+    }
+});
+</script>
+
 </body>
 </html>

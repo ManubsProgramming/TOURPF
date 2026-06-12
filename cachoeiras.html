@@ -8,8 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="cabeçario">
+<header class="cabeçario">
 
         <ul>
             <a href="index.html">
@@ -30,6 +29,20 @@
             <img class="hotel-icon" src="imgPrincipal/hoteis.png" alt="hotel" width="30px">
             <li><a href="hotel.html">Hotel</a></li>
         </ul>
+
+    <div class="menu-container">
+    <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+
+    <div class="login-box" id="loginBox">
+        <h3>Área do Usuário</h3>
+        <p>Faça login para acessar recursos exclusivos.</p>
+   <button class="btn-login"
+     onclick="window.location.href='loginEcadastro.html'">
+    Login
+</button>
+    </div>
+</div>
+
     </header>
     <div class="divisoria">
       <h1> Cachoeiras em Presidente Figueiredo</h1>
@@ -52,7 +65,7 @@
 
             <article class="card-cachoeira">
                 <div class="card-img">
-                    <img src="imgcachoeiras/caverna1.jpg" alt="Caverna Refúgio do Maroaga">
+                    <img src="imgcachoeiras/caverna2.jpg" alt="Caverna Refúgio do Maroaga">
                     <span class="card-titulo">Caverna Refúgio<br>do Maroaga</span>
                 </div>
                 <div class="card-info">
@@ -151,7 +164,7 @@
             <!-- Linha 4 -->
             <article class="card-cachoeira">
                 <div class="card-img">
-                    <img src="cachoeira10.jpg" alt="Cachoeira das Lages">
+                    <img src="imgcachoeiras/corredeira-das-lajes1.jpg" alt="Cachoeira das Lages">
                     <span class="card-titulo">Cachoeira das Lages</span>
                 </div>
                 <div class="card-info">
@@ -163,7 +176,7 @@
 
             <article class="card-cachoeira">
                 <div class="card-img">
-                    <img src="cachoeira11.jpg" alt="Cachoeira Natal">
+                    <img src="imgcachoeiras/natal1.jpg" alt="Cachoeira Natal">
                     <span class="card-titulo">Cachoeira Natal</span>
                 </div>
                 <div class="card-info">
@@ -175,7 +188,7 @@
 
             <article class="card-cachoeira">
                 <div class="card-img">
-                    <img src="cachoeira12.jpg" alt="Cachoeira do Éden">
+                    <img src="imgcachoeiras/WhatsApp Image 2026-06-12 at 13.04.53.jpeg" alt="Cachoeira do Éden">
                     <span class="card-titulo">Cachoeira do Éden</span>
                 </div>
                 <div class="card-info">
@@ -188,7 +201,7 @@
             <!-- Linha 5 -->
             <article class="card-cachoeira">
                 <div class="card-img">
-                    <img src="cachoeira13.jpg" alt="Lagoa Cristalina">
+                    <img src="imgcachoeiras/lagoa.jpg" alt="Lagoa Cristalina">
                     <span class="card-titulo">Lagoa Cristalina</span>
                 </div>
                 <div class="card-info">
@@ -212,7 +225,7 @@
 
             <article class="card-cachoeira">
                 <div class="card-img">
-                    <img src="imgcachoeiras/orquideas.jpeg" alt="Cachoeira das Orquídeas">
+                    <img src="imgcachoeiras/orquideas3.JPG" alt="Cachoeira das Orquídeas">
                     <span class="card-titulo">Cachoeira das Orquídeas</span>
                 </div>
                 <div class="card-info">
@@ -259,8 +272,8 @@
                         "O local é famoso por suas pedras coloridas e jardins naturais."
                     ],
                     images: [
-                        "imgcachoeiras/caverna1.jpg",
-                        "imgcachoeiras/caverna2.jpg"
+                        "imgcachoeiras/caverna2.jpg",
+                        "imgcachoeiras/caverna3.webp"
                     ]
                 },
                 "Cachoeira de Iracema": {
@@ -363,8 +376,8 @@
                         "Percurso de fácil acesso a partir da estrada principal."
                     ],
                     images: [
-                        "imgcachoeiras/orquideas.jpeg",
-                        "imgcachoeiras/pedra.webp"
+                        "imgcachoeiras/corredeira-das-lajes1.jpg",
+                        "imgcachoeiras/lages2.jpg"
                     ]
                 },
                 "Cachoeira Natal": {
@@ -376,8 +389,8 @@
                         "Cenário ideal para fotos em grupos."
                     ],
                     images: [
-                        "imgcachoeiras/passaros.jpg",
-                        "imgcachoeiras/passaros2.webp"
+                        "imgcachoeiras/natal1.jpg",
+                        "imgcachoeiras/natal2.jpg"
                     ]
                 },
                 "Cachoeira do Éden": {
@@ -389,8 +402,8 @@
                         "As margens têm espaços para fotos e piqueniques."
                     ],
                     images: [
-                        "imgcachoeiras/iracema.webp",
-                        "imgcachoeiras/marum.webp"
+                        "imgcachoeiras/WhatsApp Image 2026-06-12 at 13.04.53.jpeg",
+                        "imgcachoeiras/eden2.webp"
                     ]
                 },
                 "Lagoa Cristalina": {
@@ -402,8 +415,8 @@
                         "Trilha de acesso leve e agradável."
                     ],
                     images: [
-                        "imgcachoeiras/orquideas.jpeg",
-                        "imgcachoeiras/pedra.webp"
+                        "imgcachoeiras/lagoa.jpg",
+                        "imgcachoeiras/lago2.jpg"
                     ]
                 },
                 "Corredeira do Urubuí": {
@@ -416,7 +429,7 @@
                     ],
                     images: [
                         "imgcachoeiras/corredeira.jpg",
-                        "imgcachoeiras/mutum.avif"
+                        "imgcachoeiras/indio.webp"
                     ]
                 },
                 "Cachoeira das Orquídeas": {
@@ -429,7 +442,7 @@
                     ],
                     images: [
                         "imgcachoeiras/orquideas.jpeg",
-                        "imgcachoeiras/araras.jpg"
+                        "imgcachoeiras/orquideas3.JPG"
                     ]
                 }
             };
@@ -480,5 +493,27 @@
     <footer>
         <p>© 2026 - Celena Lima</p>
     </footer>
+    <!--script para o menu de login-->
+      <script>
+function toggleMenu(){
+    document
+        .getElementById("loginBox")
+        .classList.toggle("active");
+}
+
+document.addEventListener("click", function(e){
+
+    const box = document.getElementById("loginBox");
+    const btn = document.querySelector(".menu-btn");
+
+    if(
+        !box.contains(e.target) &&
+        !btn.contains(e.target)
+    ){
+        box.classList.remove("active");
+    }
+});
+</script>
+
     </body>
 </html>
