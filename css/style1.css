@@ -260,11 +260,12 @@ input[type="radio"] {
     .banner-texto p{
     font-size:18px;
     }
+    }
 
-   footer{
-    background:#efe7ca;
-    text-align:center;
-    padding:30px;
-    margin-top:40px;
-    }
-    }
+    footer {
+    background: #efe7ca;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    font-family: 'Utendo', sans-serif;
+}

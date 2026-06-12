@@ -471,3 +471,11 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.60);
     color: white;
 }
+
+footer {
+    background: #efe7ca;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    font-family: 'Utendo', sans-serif;
+}

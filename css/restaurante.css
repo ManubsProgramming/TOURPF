@@ -187,6 +187,7 @@ a:hover {
     border: 1px solid rgba(27, 112, 204, 0.16);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     cursor: pointer;
+    font-family: 'Utendo', sans-serif;
 }
 
 .card:hover,
@@ -244,13 +245,15 @@ a:hover {
 
 .card p:first-of-type,
 .carta p:first-of-type {
-    margin-top: 8px;
+    margin-top: 3px;
+    font-family: 'Utendo', sans-serif;
 }
 
 
 .card details,
 .carta details {
-    margin: 0 16px 16px;
+    margin: 0 1px 16px;
+    font-family: 'Utendo', sans-serif;
 }
 
 details {
@@ -273,6 +276,14 @@ summary {
     margin-bottom: 10px;
     text-align: center;
     color: #ffffff;
+}
+
+footer {
+    background: #efe7ca;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    font-family: 'Utendo', sans-serif;
 }
 
 @media (max-width: 1024px) {

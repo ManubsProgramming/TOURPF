@@ -680,3 +680,11 @@ input.filtro-radio {
         margin: 30px auto;
     }
 }
+
+footer {
+    background: #efe7ca;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    font-family: 'Utendo', sans-serif;
+}
