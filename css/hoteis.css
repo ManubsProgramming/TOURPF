@@ -681,6 +681,53 @@ input.filtro-radio {
     }
 }
 
+@media (max-width: 600px) {
+    .main-footer {
+        padding: 20px 15px;
+        font-size: 13px;
+    }
+
+    .hotels-section h3 {
+        font-size: 20px;
+    }
+
+    .rating {
+        font-size: 12px;
+    }
+
+    .address {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .badge {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .divisoria {
+        padding: 16px 12px 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .divisoria h1 {
+        font-size: 22px !important;
+        letter-spacing: 0.03em;
+        word-wrap: break-word;
+    }
+
+    .divisoria p {
+        font-size: 0.8rem;
+        max-width: 100%;
+        width: 100%;
+        margin: 14px 0 0;
+        padding: 0 10px;
+        box-sizing: border-box;
+        word-wrap: break-word;
+    }
+}
+
 footer {
     background: #efe7ca;
     text-align: center;

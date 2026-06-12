@@ -496,3 +496,135 @@ footer {
         max-width:400px;
     }
 }
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    .cabeçario {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px !important;
+        gap: 4px;
+    }
+
+    ul a:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+        order: -1;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul li a {
+        margin-top: 0;
+        height: auto;
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.06);
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabeçario {
+        height: auto;
+        padding: 12px 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 !important;
+        gap: 4px;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    ul a:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+        order: -1;
+    }
+
+    ul li {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li a {
+        font-size: 11px;
+        padding: 4px 7px;
+        margin-top: 0;
+        height: auto;
+        width: auto;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.06);
+    }
+
+h2 {
+        font-size: 1.8rem;
+        padding: 0 15px;
+        box-sizing: border-box;
+        word-wrap: break-word;
+    }
+
+    .hotel-icon, .cachoeira-icon, .eventos-icon,
+    .nós-icon, .comida-icon {
+        display: none !important;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 400px;
+        padding: 60px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .depoimentos h2,
+    .desenvolvimento h2 {
+        font-size: 1.8rem;
+        padding: 0 15px;
+    }
+
+    .container-desenvolvimento {
+        padding: 40px 20px;
+        border-radius: 20px;
+    }
+
+    .etapa,
+    .etapa img {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .card-depoimento {
+        width: 100%;
+        max-width: 320px;
+    }
+}
