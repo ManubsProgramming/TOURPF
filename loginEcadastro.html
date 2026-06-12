@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+
+    <link rel="stylesheet" href="css/LogineCadastro.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container" id="container">
+
+    <!-- Painel esquerdo -->
+    <div class="overlay">
+
+        <div class="overlay-content">
+
+            <div class="panel login-panel">
+                <h2>Bem-vindo!</h2>
+                <p>Faça login para acessar sua conta.</p>
+                <button id="showLogin">LOGIN</button>
+            </div>
+
+            <div class="panel register-panel">
+                <h2>Olá!</h2>
+                <p>Crie sua conta gratuitamente.</p>
+                <button id="showRegister">CADASTRAR</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Formulário Login -->
+    <div class="form-container login">
+<a href="index.html" class="btn-voltar">
+    ← 
+</a>
+        <form>
+            <div class="icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+
+            <h2>LOGIN</h2>
+
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email">
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Senha">
+            </div>
+
+            <button type="submit">ENTRAR</button>
+        </form>
+       
+    </div>
+
+    <!-- Formulário Cadastro -->
+    <div class="form-container register">
+<a href="index.html" class="btn-voltar">
+    ← 
+</a>
+        <form>
+            <div class="icon">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+
+            <h2>CADASTRO</h2>
+
+            <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Nome">
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email">
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Senha">
+            </div>
+
+            <button type="submit">CRIAR CONTA</button>
+        </form>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
