@@ -711,22 +711,34 @@ footer {
 @media (max-width: 600px) {
 
     .banner {
-        height: 180px;
-        margin-top: -30vh;
-    }
+    height: 320px;
+    margin-top: 20px;
+}
 
-    .banner-frase p {
-        font-size: 18px;
-        max-width: 200px;
-    }
+.banner-frase h1 {
+    font-size: 20px;
+    max-width: 230px;
+}
+
+.banner-frase p {
+    font-size: 14px;
+    max-width: 230px;
+}
      
     .cabeçario {
-        height: auto;
-        padding: 12px 0;
-        margin: 0;
-        width: 100%;
-    }
+    position: relative;
+    height: auto;
+    padding: 12px 0;
+    margin: 0;
+    width: 100%;
+}
 
+.menu-container {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    margin-right: 0;
+}
     ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -765,6 +777,14 @@ footer {
     .nós-icon, .comida-icon {
         display: none !important;
     }
+
+    .carrossel {
+    min-height: 500px;
+}
+
+.slides-container {
+    height: 500px;
+}
 
     .slide-item {
         top: 20%;
