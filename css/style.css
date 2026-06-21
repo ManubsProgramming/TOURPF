@@ -112,19 +112,37 @@ ul {
     padding: 8px 90px;
     box-sizing: border-box;
 }
-.barra-pesquisa form { display: flex; align-items: center; }
+.barra-pesquisa form {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
 .barra-pesquisa input[type="search"] {
-    height: 20px;
-    background: green;
-    color: #fff;
-    border: none;
-    padding: 0 10px;
-    border-radius: 4px;
+    height: 38px;
+    background-color: #fdfaf0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233f461e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-size: 16px 16px;
+    color: #2f3418;
+    border: 1px solid #8ca12d;
+    padding: 0 16px 0 38px;
+    border-radius: 15px;
     font-size: 14px;
     box-sizing: border-box;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
-.barra-pesquisa input[type="search"]::placeholder { color: rgba(255,255,255,0.8); }
+.barra-pesquisa input[type="search"]::placeholder { color: #6b6b55; }
 
+.barra-pesquisa input[type="search"]::-webkit-search-decoration,
+.barra-pesquisa input[type="search"]::-webkit-search-cancel-button,
+.barra-pesquisa input[type="search"]::-webkit-search-results-button,
+.barra-pesquisa input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
 ul li a {
     margin-top: 50px;
     height: 80px;
@@ -441,14 +459,21 @@ input[type="radio"] {
     text-align: right;
 }
 
-.banner-frase p {
-    font-family: 'UtendoBold';
-    font-size: 28px;
+.banner-frase h1{
+      font-family: 'UtendoBold';
+    font-size: 30px;
     color: #2f3418;
     line-height: 1.4;
     max-width: 400px;
 }
 
+.banner-frase p {
+    font-family: 'UtendoBold';
+    font-size: 18px;
+    color: #2f3418;
+    line-height: 1.4;
+    max-width: 400px;
+}
 
 footer {
     background: #efe7ca;
@@ -793,4 +818,13 @@ footer {
 
     .prev { left: 8px; }
     .next { right: 8px; }
+}
+
+/* ===== NOTEBOOK (telas de notebook, ex: 1920x1080 com escala 150% = ~1280px de largura CSS) ===== */
+@media (min-width: 1200px) and (max-width: 1366px) {
+
+    ul li a {
+        margin-left: 23px;
+    }
+
 }
